@@ -1,0 +1,53 @@
+@import 'variables';
+@import 'footer';
+
+.block {
+  position: relative;
+
+  &.__disabled {
+    cursor: pointer;
+
+    > * {
+      opacity: .15;
+      pointer-events: none;
+    }
+
+    &:before {
+      @extend .pro-icon;
+
+      position: absolute;
+      z-index: 89;
+      top: 50%;
+      left: 50%;
+
+      content: 'Pro';
+      transform: translate(-50%, -100%);
+    }
+
+    &:after {
+      font-weight: bold;
+
+      position: absolute;
+      z-index: 90;
+      top: calc(50% + 3px);
+      left: calc(50% + 60px);
+
+      content: 'feature';
+      transform: translate(-50%, -50%);
+
+      color: $colorBlack;
+    }
+  }
+
+  &.__pro:before {
+    content: 'Pro';
+  }
+
+  &.__pro:after {
+    left: calc(50% + 52px);
+  }
+
+  &.__turbo:before {
+    content: 'Turbo';
+  }
+}

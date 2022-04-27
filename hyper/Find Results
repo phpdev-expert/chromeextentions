@@ -1,0 +1,88 @@
+Searching 35 files for "approveAll("
+
+/Users/honeysingh/Desktop/GGT/main.js:
+  161:       approveAll(noSheet);
+  326: function approveAll(noSheet) {
+
+/Users/honeysingh/Desktop/GGT/main1.js:
+  176:       approveAll(noSheet);
+  341: function approveAll(noSheet) {
+
+4 matches across 2 files
+
+
+Searching 35 files for "momane_approveAll"
+
+/Users/honeysingh/Desktop/GGT/main.css:
+   34: .momane_approve, .momane_approveAll, .momane_adding {
+
+/Users/honeysingh/Desktop/GGT/main.js:
+   57:     $( ".momane_approveAll" ).trigger( "click" );
+   76:         $(".momane_approveAll").text("Finished");
+  129:     $(".momane_approveAll").addClass("momane_testing");
+  132:     $(".momane_approveAll").removeClass("momane_testing");
+  151:   }).on("click", "button.momane_approveAll", function () {
+  167:     $(".momane_approveAll").text("Approve All");
+  328:     $(".momane_approveAll").next()[0].click();
+  378:         if (approveAll.prev(".momane_approveAll").length < 1) {
+  379:           approveAll.before(`<button class="momane_approveAll" title="Courtesy of Group Growth Tool Ext!"> Approve All</button>`);
+  387:       $('.momane_approveAll').remove();
+
+/Users/honeysingh/Desktop/GGT/main1.js:
+   66:     $( ".momane_approveAll" ).trigger( "click" );
+   85:         $(".momane_approveAll").text("Finished");
+  144:     $(".momane_approveAll").addClass("momane_testing");
+  147:     $(".momane_approveAll").removeClass("momane_testing");
+  166:   }).on("click", "button.momane_approveAll", function () {
+  182:     $(".momane_approveAll").text("Approve All");
+  343:     $(".momane_approveAll").next()[0].click();
+  436:       if (approveAll.prev(".momane_approveAll").length < 1) {
+  437:         approveAll.before(`<button class="momane_approveAll" title="Courtesy of Group Convert Ext!"> Approve All</button>`);
+  445:     $('.momane_approveAll').remove();
+
+21 matches across 3 files
+
+
+Searching 35 files for "Group Convert"
+
+/Users/honeysingh/Desktop/GGT/dataListExt.html:
+    5:     <title>Group Convert Data List</title>
+
+/Users/honeysingh/Desktop/GGT/main.js:
+  195:       // alert("Group Convert is working");
+  243:     let msg = `You currently subscribed to the ${plan} which allows you to use Group Convert with 1 group. 
+  245:                 If this isn’t a group that you want to use with Group Convert, please click Cancel. `;
+  248:       msg = `You currently subscribed to the ${plan} which allows you to use Group Convert with 5 groups. 
+  250:               If this isn’t a group that you want to use with Group Convert, please click Cancel. `;
+
+/Users/honeysingh/Desktop/GGT/main1.js:
+  178:       // alert("Group Convert is working");
+  226:     let msg = `You currently subscribed to the ${plan} which allows you to use Group Convert with 1 group. 
+  228:                 If this isn’t a group that you want to use with Group Convert, please click Cancel. `;
+  231:       msg = `You currently subscribed to the ${plan} which allows you to use Group Convert with 5 groups. 
+  233:               If this isn’t a group that you want to use with Group Convert, please click Cancel. `;
+  429:         that.before(`<button class="momane_btn momane_approve" title="Courtesy of Group Convert Ext!"> Approve </button>`);
+  437:         approveAll.before(`<button class="momane_approveAll" title="Courtesy of Group Convert Ext!"> Approve All</button>`);
+
+13 matches across 3 files
+
+
+Searching 35 files for "Group Convert"
+
+/Users/honeysingh/Desktop/GGT/main.js:
+  195:       // alert("Group Convert is working");
+  243:     let msg = `You currently subscribed to the ${plan} which allows you to use Group Convert with 1 group. 
+  245:                 If this isn’t a group that you want to use with Group Convert, please click Cancel. `;
+  248:       msg = `You currently subscribed to the ${plan} which allows you to use Group Convert with 5 groups. 
+  250:               If this isn’t a group that you want to use with Group Convert, please click Cancel. `;
+
+/Users/honeysingh/Desktop/GGT/main1.js:
+  178:       // alert("Group Convert is working");
+  226:     let msg = `You currently subscribed to the ${plan} which allows you to use Group Convert with 1 group. 
+  228:                 If this isn’t a group that you want to use with Group Convert, please click Cancel. `;
+  231:       msg = `You currently subscribed to the ${plan} which allows you to use Group Convert with 5 groups. 
+  233:               If this isn’t a group that you want to use with Group Convert, please click Cancel. `;
+  429:         that.before(`<button class="momane_btn momane_approve" title="Courtesy of Group Convert Ext!"> Approve </button>`);
+  437:         approveAll.before(`<button class="momane_approveAll" title="Courtesy of Group Convert Ext!"> Approve All</button>`);
+
+12 matches across 2 files

@@ -1,0 +1,26 @@
+@import url('https://app.dux-soup.com/plugin/resources/fonts/sourcesanspro/css.css');
+@import 'normalize';
+@import 'variables';
+@import 'header';
+@import 'footer';
+@import 'button';
+@import 'input';
+@import 'popover';
+@import 'row';
+@import 'switch';
+@import 'premium';
+
+body {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: $defaultFontSize;
+
+  width: 430px;
+  margin: 0;
+  padding: 0;
+
+  color: $colorBlack;
+
+  &.__no-scroll {
+    overflow: hidden;
+  }
+}

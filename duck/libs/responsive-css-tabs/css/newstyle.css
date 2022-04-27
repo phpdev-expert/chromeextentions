@@ -1,0 +1,142 @@
+/*@import url('https://app.dux-soup.com/plugin/resources/fonts/opensans/css.css');*/
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+ul,ol {
+  line-height: 1.5;
+
+  margin: 18px;
+}
+
+main {
+  min-width: 320px;
+  max-width: 921px;
+  margin: 0 auto 40px;
+  padding: 0 50px;
+}
+
+section {
+  line-height: 18px;
+
+  display: none;
+
+  padding: 25px 20px;
+
+  border: 1px solid #ddd;
+  border-radius: 0 0 4px 4px;
+  background: white;
+}
+
+input {
+  display: none;
+}
+
+label.tab-label {
+  font-weight: 600;
+
+  display: inline-block;
+
+  margin: 0 0 -1px;
+  padding: 15px 18px;
+
+  text-align: center;
+
+  color: #bbb;
+  border: 1px solid transparent;
+}
+
+label.tab-label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+
+  margin-right: 10px;
+}
+
+label[for='tab1']:before {
+  content: '\f0d0';
+}
+
+label[for='tab2']:before {
+  content: '\f070';
+}
+
+label[for='tab3']:before {
+  content: '\f13d';
+}
+
+label[for='tab4']:before {
+  content: '\f1d9';
+}
+
+label[for='tab5']:before {
+  content: '\f073';
+}
+
+label[for='tab6']:before {
+  content: '\f007';
+}
+
+label[for='tab7']:before {
+  content: '\f109';
+}
+
+label.tab-label:hover {
+  cursor: pointer;
+
+  color: #888;
+}
+
+input + label.tab-label {
+  transition: all 300ms ease;
+
+  border-top: 2px solid transparent;
+}
+
+input:checked + label.tab-label {
+  color: black;
+  border: 1px solid #ddd;
+  border-top: 2px solid #5b9bf6;
+  border-bottom: 1px solid #fff;
+  background: white;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5,
+#tab6:checked ~ #content6,
+#tab7:checked ~ #content7 {
+  display: block;
+}
+
+#tab1:checked ~ #content1 input,
+#tab2:checked ~ #content2 input,
+#tab3:checked ~ #content3 input,
+#tab4:checked ~ #content4 input,
+#tab5:checked ~ #content5 input,
+#tab6:checked ~ #content6 input,
+#tab7:checked ~ #content7 input {
+  display: inline;
+}
+
+input[type=url]:invalid {
+  border: 1px solid red;
+}
+
+@media screen and (max-width: 650px) {
+  label.tab-label {
+    font-size: 0;
+  }
+
+  label.tab-label:before {
+    font-size: 18px;
+
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  label.tab-label {
+    padding: 15px;
+  }
+}

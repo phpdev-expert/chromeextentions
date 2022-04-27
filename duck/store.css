@@ -1,0 +1,45 @@
+@import url('https://app.dux-soup.com/plugin/resources/fonts/opensans/css.css');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+  font: 14px/1.3 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: black;
+  color: #333;
+  background: #fff;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: -35px;
+}
+
+td {
+  height: 50px;
+  padding-left: 10px;
+}
+
+h2 {
+  text-align: center;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 30px;
+  height: 1px;
+}
+
+.activity {
+  width: 150px;
+}
+
+.noservice {
+  position: absolute;
+  z-index: 999;
+  width: 225;
+  height: 85;
+  margin-top: -5px;
+  margin-left: 0;
+}

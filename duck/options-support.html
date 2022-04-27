@@ -1,0 +1,88 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title i18n="innerText">Support Options | __appTitle__ </title>
+        <link href="bootstrap.min.css" rel="stylesheet">
+        <link href="cover.css" rel="stylesheet">
+        <link href="libs/toastr/toastr.min.css" rel="stylesheet">
+<style type="text/css">
+
+<!--
+body,td,th {
+    font: 14px/1.3 'Open Sans', sans-serif;
+	color: #333;
+}
+.PoweredBy {
+	font-size: 10px;
+}
+body {
+	background-color: #FFF;
+}
+.beta{
+    display:none;
+}
+-->
+</style></head>
+
+<body style="margin-top:50px;">
+    <table cols="3" width="50%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td colspan="3" align="center">
+                <p><img src="icon-122.png" width="122" height="122" /></p>
+                <p><strong><span i18n="innerText">__appTitle__</span> Support options:</strong></p>
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td width="15%">&nbsp;</td><td>
+                <h3>Reload Configuration</h3>
+                Click to reload the <span i18n="innerText">__appTitle__</span> configuration: <input type="submit" id="reload" value="Reload" class="btn btn-lg btn-default activity"> <br/>
+            </td><td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td width="15%">&nbsp;</td><td>
+                    <span>Set the type of user authentication:</span> :
+                <select id="userauthenticationtype">
+                    <option value="websession">Web</option>
+                    <option value="oauth2">Chrome</option>
+                </select>
+            </td><td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td width="15%">&nbsp;</td><td>
+                <h3>Technical Support</h3>
+                <input type="checkbox" id="manageddownload" value="manageddownload"> Enable Managed Downloads ( Required for large files )<br>
+                <input type="checkbox" id="debugmode" value="debugmode"> Enable debug mode ( 1 visit per result-page, enable automations on manual visit )<br>
+                <input type="checkbox" id="debuglog" value="debuglog"> Enable debug- and info-logmessages<br>
+                <input type="checkbox" id="logstack" value="logstack"> Log call stack for all log-events, must include : <input type="text" id="logstackfilter" placeholder="enter filter"/>.<br>
+                <input type="checkbox" id="pauserobot" value="pauserobot"> Pause any running auto-visit.<br>
+                Offset for daily limit in minutes before or after next midnight UTC : <input type="number" id="dailylimitoffset" value="0" min="-1440" max="+1440" style="width:4em"> (requires manual 'reload') <br>
+            </td><td>&nbsp;</td>
+        </tr>
+
+            </td><td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center"><br/>
+                <em>Changes are automatically saved and take effect immediately. Options marked Pro are ignored in the Starter Edition.</em><br/></br>
+                <p><strong>Your userid: </strong><span id="userid"></span>.</p>
+                <p><strong>Your clientid: </strong><span id="clientid"></span>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center"><br/>
+                <hr/><br/><br/><a target="_blank" i18n="@href" href="__twitterURL__"><img src="twitter.png"/></a> for the latest <span i18n="innerText">__appTitle__</span> news, updates and service alerts.</p>
+            </td>
+        </tr>
+    </table>
+    <script src="label.js"></script>
+    <script src="libs/jquery/jquery-2.1.4.min.js"></script>
+    <script src="libs/toastr/toastr.min.js"></script>
+    <script src="options.js"></script>
+</body>
+</html>
+
+
+

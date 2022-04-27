@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8"/>
+        <style>
+			@font-face {
+				font-family: "Trebuchet MS";
+				src: url("fonts/trebuc.ttf");
+			}
+			body {
+				margin: 0;
+				padding: 0;
+				text-align: left;
+				width: 300px;
+				font-size: 14px;
+				font-family: "Trebuchet MS", Helvetica, sans-serif;
+				font-weight: normal;
+				background: #ffffff;
+				color: #4b4f56;
+			}
+			a {
+				text-decoration: none;
+				color: #008cc9;
+			}
+			table {
+				border-collapse: collapse;
+				width: 100%;
+			}
+			td {
+				border: 1px solid #ced0d4;
+				font-size: 85%;
+				padding: 2.5px 5px;
+			}
+			input[type="number"], input[type="password"], input[type="email"], input[type="tel"], input[type="text"], input[type="file"], select
+			{
+				color: #4b4f56;
+				border: 1px solid #ced0d4;
+				padding: 0 8px;
+				margin-bottom: 1px;
+				line-height: 27.5px;
+				font-weight: normal;
+				font-size: 14px;
+				width: 262px;
+				font-family: "Trebuchet MS", Helvetica, sans-serif;
+			}
+			.error-message {
+				color: #a94442;
+				border: 1px solid #ebccd1;
+				padding: 0 8px;
+				margin-bottom: 1px;
+				font-weight: normal;
+				font-size: 13px;
+				width: 266px;
+				margin: 7.5px 7.5px 0px 7.5px;
+				background: #f2dede;
+				text-align: center;
+				line-height: 27.5px;
+			}
+			.success-message {
+				color: #3c763d;
+				border: 1px solid #d6e9c6;
+				padding: 0 8px;
+				margin-bottom: 1px;
+				font-weight: normal;
+				font-size: 13px;
+				width: 266px;
+				margin: 7.5px 7.5px 0px 7.5px;
+				background: #dff0d8;
+				text-align: center;
+				line-height: 27.5px;
+			}
+			.actions {
+				background-color: #005E93;
+				border-top: 1px solid #ced0d4;
+				padding: 7.5px;
+				text-align: left;
+			}
+			
+			.TabContent button {
+				background-color: #f6f7f9;
+				color: #4b4f56;
+				border: 1px solid #ced0d4;
+				padding: 0 8px;
+				line-height: 27.5px;
+				font-size: 11px;
+				text-transform: uppercase;
+				letter-spacing: 0.75px;
+				font-family: "Trebuchet MS", Helvetica, sans-serif;
+				margin-top: 10px;
+				margin-right: 6.5px;
+			}
+			.TabContent button.Primary {
+				background-color: #008cc9;
+				color: #ffffff;
+				border: 1px solid #4267b2;
+			}
+			
+			.TabContent span {
+				line-height: 1.5em;
+			}
+			
+			.TabContent label {
+				display: inline-block;
+				margin-bottom: 0.50em;
+			}
+			
+			.TabContent {
+				height: auto;
+			}
+			.TabContent > .ContentBody {
+				text-align: justify;
+				padding: 10px;
+			}
+			
+			.Navigation {
+				background-color: #005E93;
+				border-top: 1px solid #ced0d4;
+				border-bottom: 1px solid #ced0d4;
+				user-select: none;
+			}
+			.Navigation > span {
+				color: aliceblue;
+				margin-top: 2.25px;
+				padding: 8.5px 10.5px 9.5px 10.5px;
+				display: inline-block;
+				cursor: pointer;
+				font-size: 11px;
+				text-transform: uppercase;
+				letter-spacing: 0.75px;
+			}
+			.Navigation > span.selected {
+				color: #4b4f56;
+				cursor: default;
+				border-top: 1px solid #ced0d4;
+				border-left: 1px solid #ced0d4;
+				border-right: 1px solid #ced0d4;
+				background-color: #ffffff;
+				height: 14px;
+				margin-bottom: -1px;
+			}
+			.Navigation > span.selected:first-child {
+				border-left: 0;
+			}
+		</style>
+    </head>
+    <body>
+    	<nav class="Navigation">
+			<span name="Home">Home</span>
+			<span name="History">History</span>
+			<span name="Info">Info</span>
+			<span name="Settings">Settings</span>
+		</nav>
+		<div id="LicenseInfo"></div>
+		<div id="Message"></div>
+		<div class="TabContent Home">
+			<div class="ContentBody Loading">
+				<div style="text-align: center; margin-top: 25px; margin-bottom: 25px;">
+					<svg width="75px" height="75px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+						<circle cx="50" cy="50" fill="none" stroke="#456caa" stroke-width="10" r="35" stroke-dasharray="164.93361431346415 56.97787143782138" transform="rotate(119.951 50 50)">
+							<animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 50;360 50 50" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"></animateTransform>
+						</circle>
+					</svg>
+				</div>
+				<button class="Default" name="Close">Close</button>
+			</div>
+			<div class="ContentBody Ready">
+				<span>You are logged in to your PayPal account. Please upload the order list (tracking numbers) file to submit the tracking numbers.</span><br/>
+				<label style="margin-top: 0.5em;">Tracking Numbers (CSV):</label><br/>
+				<input name="OrderList" type="file" style="font-size: 10px; padding: 0 11px 0 5px; vertical-align: bottom;"/><br/>
+				<button class="Primary" name="StartProcess">Start Scanning</button>
+				<button class="Default" name="Close">Close</button>
+			</div>
+			<div class="ContentBody ProcessStatus">
+				<span>CSV File: <span name="TotalOrders">0</span> Orders Found</span><br/>
+				<span style="display: none">Total Transactions: <span name="TotalTransactions">0</span></span>
+				<span>Paypal: <span name="ScrapedTransactions">0</span> Transactions Found</span><br/>
+				<div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+					<svg width="75px" height="75px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+						<circle cx="50" cy="50" fill="none" stroke="#456caa" stroke-width="10" r="35" stroke-dasharray="164.93361431346415 56.97787143782138" transform="rotate(119.951 50 50)">
+							<animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 50;360 50 50" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"></animateTransform>
+						</circle>
+					</svg>
+				</div>
+				<span>Tracking Info Submitted: </span><span name="TotalSubmitted">0</span>/<span name="TotalMatched">0</span><br/>
+				<button class="Primary" name="StopProcess">Stop</button>
+				<button class="Default" name="Close">Close</button>
+			</div>
+			<div class="ContentBody LoginToPayPal">
+				<span>You are not logged in to your PayPal account. Please login to continue.</span><br/>
+				<button class="Primary" name="LoginToPayPal">Login To PayPal</button>
+				<button class="Default" name="Close">Close</button>
+			</div>
+		</div>
+		<div class="TabContent History">
+			<div class="ContentBody">
+				<span>Last Scanned On: </span><span name="ScanDate"></span><br/>
+				<span>Total Tracking Info Submitted: </span><span name="TotalSubmitted"></span><br/>
+				<div style="max-height: 364px; overflow-y: scroll;">
+					<table name="SubmitSuccessList" style="table-layout: fixed;"></table>
+				</div>
+				<button class="Default" name="Close">Close</button>
+			</div>
+		</div>
+		<div class="TabContent Info">
+			<div class="ContentBody" style="">
+				<div style="text-align: left; font-size: 12px; max-height: 483.5px; overflow-y: scroll;">
+					<div style="font-weight: bold;">❒ Notes:</div>
+					<ul style="margin-block-start: 0.25em; margin-block-end: 0.5em; padding-inline-start: 2.5em;">
+						<li>CSV files only</li>
+						<li>Maximum 9000 tracking codes</li>
+						<li>Paypal Accepts 1 tracking code per order. If multiple tracking codes are contained in spreadsheet for a single order, the first code will be assigned</li>
+						<li>Tracking Number Matches to Email ONLY, therefore ensure PayPal emails are used</li>
+						<li>Adjust # of Orders to scan as required in Settings before upload</li>
+						<li>CH_EMS (epacket) is entered by default if no courier present</li>
+						<li>Orders will be highlight red In history report after upload if any errors are found</li>
+					</ul>
+					
+					<div style="font-weight: bold;">❒ Extension Scans and matches by the following column heading keywords:</div>
+					<div style="font-weight: bold; margin-left: 2.5em;">Required:</div>
+					<ul style="margin-block-start: 0.25em; margin-block-end: 0.25em; padding-inline-start: 2.5em;">
+						<li>Email</li>
+						<li>Tracking</li>
+						<li>Date (YYYY-MM-DD, MM/DD/YYYY, Mon Oct 05 2015) - format must match one of these</li>
+					</ul>
+					<div style="font-weight: bold; margin-left: 2.5em;">Not Required (used in report):</div>
+					<ul style="margin-block-start: 0.25em; margin-block-end: 0.5em; padding-inline-start: 2.5em;">
+						<li>Order (your store’s order number)</li>
+						<li>Courier (Other will be selected and your entry inputted)</li>
+					</ul>
+					
+					❒ Please ensure only one of each is present and spelt correctly in heading column. Heading can be long form, as long as keyword is present. Ex. Tracking Number or Order Number.<br/>
+					❒ For questions, bugs contact paypaltrackingupload@gmail.com<br/>
+					❒ For support or feature requests please contact paypaltrackingupload@gmail.com<br/>
+				</div>
+				<button class="Default" name="Close">Close</button>
+			</div>
+		</div>
+		<div class="TabContent Settings">
+			<div class="ContentBody">
+				<label>Scan Orders (Latest) Up To:</label><br/>
+				<input name="OrdersToScan" type="number"/><br/>
+				<button class="Primary" name="UpdateSettings">Update Settings</button>
+				<button class="Default" name="Close">Close</button>
+			</div>
+		</div>
+		<script type="text/javascript" src="popup.js"></script>
+    </body>
+</html>

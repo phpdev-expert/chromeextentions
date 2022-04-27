@@ -1,0 +1,63 @@
+@import 'variables';
+
+.switch {
+  position: relative;
+
+  display: inline-block;
+
+  width: 60px;
+  height: 30px;
+
+  user-select: none;
+}
+
+.switch input {
+  width: 0;
+  height: 0;
+
+  opacity: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  cursor: pointer;
+  transition: $defaultAnimDuration;
+
+  background-color: rgba(black, .08);
+}
+
+.slider:before {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+
+  width: 24px;
+  height: 24px;
+
+  content: '';
+  transition: $defaultAnimDuration;
+
+  background-color: white;
+  box-shadow: 0 0 2px rgba(black, .2);
+}
+
+input:checked + .slider {
+  background-color: $colorGreen;
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+.slider.round {
+  border-radius: 30px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

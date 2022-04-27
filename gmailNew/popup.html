@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style type="text/css">
+    input#totalmail {
+    color: black;
+}
+</style>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>FunnelCloner</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link href="./css/popup.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row text-center header">
+	    <!-- <img src="icon.png" alt="FunnelCloner" class="logo" style="height: 25px;width: 30px;"> -->
+        <img src="images/output-onlinepngtools.png" alt="FunnelCloner" class="logo">
+    </div>
+
+    <div id="loader" class="row text-center" style="display:none;">
+        <img src="./images/loader_2.gif" alt="FunnelCloner" class="loader">
+    </div>
+
+    <div class="row" id="form_container" style="display:none;">
+        <div class="col-md-12">
+            <div id="error" class="alert alert-danger text-center" style="display:none;">
+                <strong>Danger!</strong>
+                <p id="text-msg"> </p>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <form id="login">
+                <input type="hidden" name="method" value="login">
+                <div class="container">
+                    <input type="email"    id="username"    placeholder="Your Email" name="email" required>
+                    <input type="password" id="password"  placeholder="Your Password" name="psw" required>
+
+                    <button type="info" class="success" id="dologin">Login</button>
+
+                    <p>
+                      <a href="#" id="forgotpasslink"> Forgot password </a>
+                    </p>
+                </div>
+            </form>
+
+            <form id="forgotpass" style="display:none;">
+                <input type="hidden" name="method" value="reset_password">
+                <div class="container">
+                    <label for="email"><b>Email</b></label>
+                    <input type="email" placeholder="Enter Email" name="email" required>
+
+                    <button type="submit" class="info">Recovery My Password</button>
+                </div>
+ 
+                <div class="container">
+                    <span class="password"><a href="#loginBackBtn" id="loginBackBtn">Back to Login?</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row text-center" id="dashboard" style="display:none;">
+        <div class="col-md-12">
+
+
+ <input type="number" id="totalmail" style="width: 100%" value="5"  placeholder="No of Mail" >
+                <button  class="info" id="extract"
+                              class="fa fa-sign-out"></i> Swipe
+                      </button>
+
+
+        <span> Click on the buttons above to swipe email search result </span>
+
+			<button  class="info" id="btn_logout"
+                    class="fa fa-sign-out"></i> Logout
+            </button>
+
+        </div>
+    </div>
+</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="popup.js"></script>
+
+</body>
+</html>

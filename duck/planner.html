@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title i18n="innerText"> __robotPlannerTitle__ | __appTitle__ </title>
+    <link href="libs/vex/vex.css" rel="stylesheet">
+    <link href="libs/vex/vex-theme-default.css" rel="stylesheet">
+    <link href="libs/scheduler/scheduler.css" rel="stylesheet">
+    <link href="libs/toastr/toastr.min.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="store.css" rel="stylesheet">
+</head>
+
+<body style="margin-top:50px;">
+    <div class="container">
+        <table cellspacing="10px;" style="margin-left:auto;margin-right:auto">
+            <tr>
+                <td colspan="3" align="center">
+                    <p><img src="icon-122.png" width="122" height="122" /></p>
+                    <h2 i18n="innerText">__theRobotPlanner__</h2>
+                    <p><strong i18n="innerText">__theRobotPlannerHint__</strong></p>
+                    <input type="hidden" id="robotscheduleplan" value="robotscheduleplan">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">                    
+                    <div id="weekly-schedule"></div>
+                </td>
+            </tr>            
+            <tr>
+                <td colspan="3" align="center">
+                    <input type="checkbox" id="snooze" value="snooze"> <span i18n="innerText">__snoozeSwitchLabel__</span><br>
+            </td></tr>
+            <tr><td style="text-align: right">
+                <input i18n="@value" type="submit" id="randomizeSchedule" value="__random__" class="btn btn-lg btn-default activity">  
+                <input i18n="@value" type="submit" id="resetSchedule" value="__default__" class="btn btn-lg btn-default activity">  
+                <input i18n="@value" type="submit" id="clearSchedule" value="__clear__" class="btn btn-lg btn-default activity"> 
+                <input i18n="@value" type="submit" id="saveSchedule" value="__save__" class="btn btn-lg btn-default activity"> 
+                <br/>
+            </td></tr>
+        </table>
+        <hr>
+            
+    </div>
+    <script src="label.js"></script>    
+    <script src="libs/jquery/jquery-2.1.4.min.js"></script>
+    <script src="libs/scheduler/scheduler.js"></script>
+    <script src="libs/toastr/toastr.min.js"></script>
+    <script src="libs/vex/vex.combined.min.js"></script>
+    <script src="popuptools.js"></script>
+    <script src="schedulertools.js"></script>
+    <script src="options.js"></script>
+    <script src="schedulertools.js"></script>
+
+    </body>
+
+</html>

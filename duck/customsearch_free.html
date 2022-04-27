@@ -1,0 +1,53 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title i18n="innerText">LinkedIn Search | __appTitle__ </title>
+<link href="bootstrap.min.css" rel="stylesheet">
+<link href="cover.css" rel="stylesheet">
+
+
+<style type="text/css">
+<!--
+body,td,th {
+    font: 14px/1.3 'Open Sans', sans-serif;
+	color: #333;
+}
+.PoweredBy {
+	font-size: 10px;
+}
+body {
+	background-color: #FFF;
+}
+-->
+</style></head>
+
+<body style="margin-top:50px;">
+<table cols="3" width="50%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="3" align="center"><p><img src="icon-122.png" width="122" height="122" /></p>
+    <p><strong>Welcome to the <span i18n="innerText">__appTitle__</span> search tool</strong>. <br />
+      <em><span i18n="innerText">__appTitle__</span> search uses Google to find prospects in LinkedIn using your search keywords. Use <span i18n="innerText">__appTitle__</span> to visit them all!<br />
+</em></p></td></tr>
+        <tr>
+        <td>
+            <input type="text" id="titlequery" placeholder="Title"  class="form-control" >
+        </td>
+        <td>
+            <input type="text" id="locationquery" placeholder="Location"  class="form-control" >
+        </td>
+        <td style="width:100px" >
+            <input type="submit" id="search" value="Search" style="width:100px" class="btn btn-default activity">
+        </td>
+
+  </tr><tr><td align="center" colspan="3">
+    <p><br/><em>(Up to 100 unique profile visits per day, <a id="buy" tabindex="-1" href="#">Upgrade to <span i18n="innerText">__appTitle__</span> Pro</a> to unlock unlimited profiles views per day.)</em></p></td></tr>
+</table>
+<br />
+    <script src="label.js"></script>
+    <script src="popuptools.js"></script>
+    <script src="popupactions.js"></script>
+    <script src="staticpopup.js"></script>
+</body>
+</html>

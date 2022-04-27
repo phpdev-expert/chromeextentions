@@ -1,0 +1,82 @@
+@import 'variables';
+
+header.row {
+  padding: 10px;
+}
+
+.logo {
+  float: left;
+
+  width: 40px;
+  margin-right: 10px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.on-off {
+  margin-bottom: 8px;
+}
+
+.on,
+.off {
+  cursor: pointer;
+  pointer-events: none;
+}
+
+// Disabled state
+.on-off:not(.__enabled) .on {
+  font-weight: bold;
+
+  pointer-events: all;
+
+  color: $colorGreen;
+}
+
+// Enabled state
+.on-off.__enabled .off {
+  font-weight: bold;
+
+  pointer-events: all;
+
+  color: $colorRed;
+}
+
+.statistic {
+  font-weight: 400;
+
+  float: left;
+
+  &-profiles_count {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &-visits_count {
+    font-size: 15px;
+  }
+}
+
+.options {
+  float: right;
+
+  &-button {
+    position: relative;
+  }
+
+  &-title {
+    position: absolute;
+    top: 8px;
+    right: 38px;
+
+    cursor: pointer;
+    white-space: nowrap;
+
+    color: $colorTextGrey;
+  }
+
+  &-button + &-button {
+    margin-top: 10px;
+  }
+}

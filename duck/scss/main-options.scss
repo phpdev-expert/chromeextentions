@@ -1,0 +1,129 @@
+@import url('https://app.dux-soup.com/plugin/resources/fonts/sourcesanspro/css.css');
+@import 'normalize';
+@import 'variables';
+@import 'block';
+@import 'button';
+@import 'input';
+@import 'popover';
+@import 'row';
+@import 'switch';
+
+body {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+
+  margin: 0;
+  padding: 0;
+
+  color: $colorBlack;
+  background-color: $rowGreyBg;
+}
+
+header.header {
+  overflow: hidden;
+
+  margin-top: 30px;
+  margin-bottom: 40px;
+
+  animation: 2s ease-out 0s 1 slideDown;
+  text-align: center;
+
+  .logo {
+    display: inline-block;
+
+    width: 60px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .title {
+    float: left;
+
+    margin-top: 12px;
+    margin-left: 12px;
+  }
+
+  .hint {
+    display: inline-block;
+
+    margin-top: 2px;
+
+    color: $colorTextGrey;
+  }
+}
+
+.option-title {
+  font-size: 1.1em;
+  font-weight: bold;
+
+  margin-bottom: 2px;
+}
+
+.option-description {
+  margin-bottom: 12px;
+}
+
+.toggle-option {
+  overflow: hidden;
+
+  &_toggle {
+    float: left;
+
+    width: 60px;
+  }
+
+  &_description {
+    float: left;
+
+    width: calc(100% - 60px);
+    padding-top: 4px;
+    padding-left: 10px;
+
+    &_icon {
+      position: relative;
+      bottom: -4px;
+
+      display: inline-block;
+      overflow: hidden;
+
+      margin-top: -8px;
+      margin-left: 3px;
+
+      border-radius: 2px;
+    }
+  }
+
+  & + & {
+    margin-top: 5px;
+  }
+}
+
+.mt-25 {
+  margin-top: 25px;
+}
+
+.mt-1 {
+  margin-top: 1px;
+}
+
+.color-muted {
+  color: $colorTextGrey;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(-5px);
+
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+
+    opacity: 1;
+  }
+}

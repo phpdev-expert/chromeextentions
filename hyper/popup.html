@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Group Hyper  Growth Tools</title>
+
+
+    <link rel="stylesheet" href="loader.css">
+    <script src="lib/jquery-3.1.0.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/sweetalert.min.js"></script>
+    <script src="const.js"></script>
+    <script src="text.js"></script>
+    <script src="auth.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap-3.2.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="popup.css">
+
+
+</head>
+
+<body>
+    <div class="container-fluid">
+            <div class="row text-center header">
+                <img src="./images/logo.png" alt="GroupGrowthTools" class="logo">
+            </div>
+            <div id="loader" class="row text-center" style="display:none;">
+                <img src="./images/loader2.gif" alt="GroupGrowthTools" class="loader">
+            </div>
+
+            <div class="row" id="form_container">
+                <div class="col-md-12">
+                    <div id="error" class="alert alert-danger text-center" style="display:none;">
+                        <strong>Danger!</strong>
+                        <p id="text-msg"> </p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <form id="login">
+                        <input type="hidden" name="method" value="login">
+                        <div class="container">
+                            <input type="email"    id="username"    placeholder="Your Email" name="email" required>
+                            <input type="password" id="password"  placeholder="Your Password" name="psw" required>
+
+                            <button type="info" class="success" id="dologin">Login</button>
+
+                            <p>
+                              <a href="#" id="forgotpasslinks"> Update Password </a>
+
+                            </p>
+                        </div>
+                    </form>
+
+                    <form id="forgotpass" style="display:none;">
+                        <input type="hidden" name="method" value="reset_password">
+                        <div class="container">
+                            <label for="email"><b>Email</b></label>
+                            <input type="email" placeholder="Enter Email" name="email" required>
+
+                            <button type="submit" class="info">Recovery My Password</button>
+                        </div>
+
+                        <div class="container">
+                            <span class="password"><a href="#loginBackBtn" id="loginBackBtn">Back to Login?</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+             <div class="row" id="dashboard" style="display:none;">
+                <div class="col-md-12">
+                    <div id="addinput" style="display:none;">
+                      <div class="form-group col-md-5 col-sm-5 col-xs-5 boxclass">
+                        <label id="label">Freinds <a href="#"><span style="color: #428bca;" class="fa fa-question-circle" data-toggle="tooltip" data-original-title="Enter no. of friends"></span></a></label>
+                        <input type="email" class="form-control" id="addnmbr" maxlenth="2" aria-describedby="emailHelp" placeholder="Add Friends">
+
+                      </div>
+                      <div class="form-group col-md-5 col-sm-5 col-xs-5 boxclass">
+                        <label id="label">Delay <span style="color: #428bca;" class="fa fa-question-circle" data-toggle="tooltip" data-original-title="Enter delay in seconds from 1-12"></label>
+                        <input type="text" class="form-control" id="adddelay" maxlenth="2" placeholder="Add Delay">
+                      </div>
+                       <div class="form-group col-md-2 col-sm-2 col-xs-2 boxclass">
+                         <label id="label">&nbsp; </label>
+                            <button class="btn btn-primary" id="addbtn" type="button"> Go!</button>
+
+                      </div>
+                     </div>
+                    <!--<div class="input-group" id="addinput" style="display:none;">
+
+                        <input type="search" id="addnmbr" placeholder="Add Friends" title="Enter no of friends to add" class="form-control">
+                        <input type="search" id="adddelay" placeholder="Add Delay" title="Enter no ofdelay to add"  class="form-control">
+                        <span class="input-group-btn">
+                         <button class="btn btn-primary" id="addbtn" type="button"> Go!</button>
+                        </span>
+                    </div>-->
+
+                  <p>
+                    <a href="#" id="add-friends" class="btn btn-sq-sm btn-primary">
+                      <i class="fa fa-users fa-2x"></i><br/>
+                        Add Friends
+                    </a>
+                    <a href="#" id="pending-friends" class="btn btn-sq-sm btn-danger">
+                      <i class="fa fa-minus-circle fa-2x"></i><br/>
+                      Cancel Pending Friends Request
+                    </a>
+                    <a href="#" id="view-data" target="_blank" class="btn btn-sq-sm btn-info">
+                      <i class="fa fa-cube fa-2x"></i><br/>
+                      List Growth Tool (View Data)
+                    </a>
+
+                  </p>
+                  <p>
+                              <a href="#" id="logoutLink"> Logout </a>
+
+                  </p>
+                </div>
+
+            </div>
+
+
+    </div>
+    <!-- <div class="container">
+        <header>
+            <h2>
+                <img style="width: 290px;" src="logo.png">
+            </h2>
+        </header>
+
+
+        <div class="login" style="padding: 0px 41px;">
+            <label for="email">
+                Please enter your email address. Start your journey towards FB group automation.
+            </label>
+            <input name="email" class="form-control" id="email" type="email" style="margin-top:10px;">
+        </div>
+
+        <div class="buttons" style="padding: 0px 41px;">
+            <button class="btn btn-primary " id="save">Save</button>
+             <button class="btn btn-primary " id="cancel">Cancel</button>
+        </div>
+
+        <div class="infoBar" style="margin-bottom:20px;">&nbsp;</div>
+
+        <div class="useful-link-footer">Check out links below:</div>
+        <footer class="pull-left" style="width: 100%;">
+
+        </footer>
+    </div>
+
+    <div class="loading">Loading&#8230;</div>-->
+    <script src="popup.js"></script>
+
+
+
+
+</body>
+
+</html>

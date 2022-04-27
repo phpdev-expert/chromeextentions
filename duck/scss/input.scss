@@ -1,0 +1,44 @@
+@import 'variables';
+
+.input {
+  padding: 5px;
+
+  border: 1px solid $inputBorder;
+  border-radius: 5px;
+
+  &.__small {
+    padding: 2px;
+
+    border-radius: 3px;
+  }
+
+  &.__full {
+    width: 100%;
+  }
+
+  &:focus {
+    border-color: $accentColor;
+    outline: none;
+  }
+}
+
+textarea.input {
+  width: 100%;
+
+  resize: none;
+
+  &.__rounded {
+    padding: 10px;
+
+    border-radius: 10px;
+  }
+}
+
+select.input {
+  padding: 2px 4px;
+
+  border: 1px solid $inputBorder;
+  border-radius: 1px;
+  outline: none;
+  background: white;
+}

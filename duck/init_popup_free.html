@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title i18n="innerText">__appTitle__</title>
+  <link rel="stylesheet" href="popup-redesigned.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+<body>
+
+<!-- Header -->
+<header class="row">
+  <div class="logo">
+      <img src="icon-large.png">
+    </div>
+  <div class="statistic">
+    <div class="on-off">
+      <strong>Dux-Soup</strong>
+    </div>
+
+    <div class="statistic-profiles_count" id="recentrecords"></div>
+    <div class="statistic-visits_count" id="todayrecords"></div>
+  </div>
+  <div class="options">
+    <div class="options-button">
+      <div class="options-title" id="options" style="text-transform: capitalize" i18n="innerText">__options__</div>
+
+      <button class="btn __icon" id="options">
+        <i class="fas fa-cog"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Main Actions -->
+<section class="row __grey">
+  <!-- Search -->
+  <div class="buttons">
+    <div class="control">
+      <button class="btn __full activity" id="linkedin" i18n="innerText">__searchaction__</button>
+    </div>
+    <div class="description">
+      <span i18n="innerText">__searchlabel__</span>
+    </div>
+    <a class="video-tutorial" i18n="@href" title="Watch Tutorial on YouTube" target="_blank" href="__searchvideo__"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <!-- Sales -->
+  <div class="buttons">
+    <div class="control">
+      <button class="btn __full activity" id="salesnav" i18n="innerText">__salesnavaction__</button>
+    </div>
+    <div class="description">
+      <span i18n="innerText">__salesnavlabel__</span>
+    </div>
+    <a class="video-tutorial" i18n="@href" title="Watch Tutorial on YouTube" target="_blank" href="__salesnavvideo__"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <!-- Recruiter -->
+  <div class="buttons">
+    <div class="control">
+      <button class="btn __full activity" id="premium-popup" i18n="innerText">__recruiteraction__</button>
+    </div>
+    <div class="description">
+      <span i18n="innerText">__recruiterlabel__</span>
+    </div>
+  </div>
+
+  <!-- X-Ray -->
+  <div class="buttons">
+    <div class="control">
+      <button class="btn __full activity" id="googlefree" i18n="innerText">__xrayaction__</button>
+    </div>
+    <div class="description">
+      <span i18n="innerText">__xraylabel__</span>
+    </div>
+    <a class="video-tutorial" i18n="@href" title="Watch Tutorial on YouTube" target="_blank" href="__xrayvideo__"><i class="fab fa-youtube"></i></a>
+  </div>
+</section>
+
+<section class="row __horizontal">
+  <!-- Open Revisit Data -->
+  <div class="buttons">
+    <div class="control">
+      <button class="btn __full activity" id="premium-popup" i18n="innerText">__uploadaction__</button>
+    </div>
+
+    <span class="info-icon popover-trigger">
+      <span class="info-icon_i">i</span>
+      <span class="popover above" i18n="innerText">__uploadlabel__</span>
+    </span>
+  </div>
+
+  <!-- Open Tag Search -->
+  <div class="buttons">
+    <div class="control">
+      <button class="btn __full activity" id="tagsearch" i18n="innerText" disabled="true">__tagsearchaction__</button>
+    </div>
+
+    <span class="info-icon popover-trigger">
+      <span class="info-icon_i">i</span>
+      <span class="popover above" i18n="innerText">__tagsearchlabel__</span>
+    </span>
+  </div>
+
+  <!-- Visit Connections -->
+  <div class="buttons">
+    <div class="control">
+      <button class="btn __full activity" id="premium-popup" i18n="innerText" >__connectionsaction__</button>
+    </div>
+
+    <span class="info-icon popover-trigger">
+      <span class="info-icon_i">i</span>
+      <span class="popover above">
+        <span i18n="innerText">__connectionslabel__</span>
+      </span>
+    </span>
+  </div>
+</section>
+
+<!-- Premium Popup -->
+<section class="premium-popup">
+  <!--<button id="close-premium-popup" class="btn">Close</button>-->
+  <div class="premium-popup_header">
+    <div class="premium-popup_close" id="close-premium-popup">
+      <i class="fas fa-times"></i>
+    </div>
+
+    <h3>This is a Premium feature!</h3>
+    <p>$14.99/month</p>
+    <p>
+      <button id="buy" class="btn __blue" style="width: 100px;">Go Pro!</button>
+    </p>
+  </div>
+
+  <div class="premium-popup_middle">
+    <h4>What You Get</h4>
+    <ul class="premium-popup_feature-list">
+        <li>Send automated personalized connection requests</li>
+        <li>Visit 100's of profiles per day (within LinkedIn limits)</li>
+        <li>Organize profiles with tags &amp; notes</li>
+        <li>Download full profile details</li>
+      </ul>
+  </div>
+
+  <div class="premium-popup_footer">
+    <button id="buy" class="btn" style="width: 100px;">Learn More</button>
+    <button id="buy" class="btn __blue" style="width: 100px; margin-left: 15px;">Go Pro!</button>
+  </div>
+</section>
+
+<!-- Footer-->
+<footer class="footer-menu">
+  <a class="footer-menu_item" target="_blank" href="http://channel.dux-soup.com">
+    <i class="fab fa-youtube footer-menu_icon"></i>
+    <div>Watch Tutorials</div>
+  </a>
+  <div class="footer-menu_item" id="contact">
+    <i class="fas fa-envelope footer-menu_icon"></i>
+    <div>Contact Us</div>
+  </div>
+  <div class="footer-menu_item" id="buy">
+    <span class="pro-icon">DuxPro</span>
+    <div>Go Pro</div>
+  </div>
+  <span style="color:#787878; bottom:0;right:2px;float:right;position:absolute;" id="version"></span>
+</footer>
+
+<script src="label.js"></script>
+<script src="popuptools.js"></script>
+<script src="popupactions.js"></script>
+<script src="staticpopup.js"></script>
+</body>
+</html>

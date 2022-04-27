@@ -1,0 +1,32 @@
+
+.schedule-rows td {
+  width: 65px;
+  height: 3px;
+  margin: 3px;
+  padding: 2px;
+  background-color: #6c8791;
+  cursor: pointer;
+  border: 1px solid white;
+}
+td.time-label{
+  font-size: 14px;
+  line-height:12px;
+}
+td.hidden-time-label{
+  visibility: hidden
+}
+.schedule-rows td:first-child {
+  background-color: transparent;
+  text-align: right;
+  position: relative;
+  top: -8px;
+}
+
+.schedule-table th{
+  text-align: center;
+}
+
+.schedule-rows td[data-selected],
+.schedule-rows td[data-selecting] { background-color: #5bd848 }
+
+.schedule-rows td[data-disabled] { opacity: 0.55; }

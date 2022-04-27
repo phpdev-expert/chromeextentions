@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title i18n="innerText">__appTitle__</title>
+  <link rel="stylesheet" href="popup-redesigned.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+<body>
+
+<!-- Header -->
+<header class="row">
+  <div class="logo">
+    <img src="icon-large.png">
+  </div>
+  <div class="statistic">
+    <div class="on-off">
+      <strong>Dux-Soup</strong> Recorder &middot; <span id="toggle" class="on">On</span> | <span id="toggle" class="off">Off</span>
+    </div>
+
+    <div class="statistic-profiles_count" id="recentrecords"></div>
+    <div class="statistic-visits_count" id="todayrecords"></div>
+  </div>
+  <div class="options">
+    <div class="options-button">
+      <div class="options-title" id="options" style="text-transform: capitalize" i18n="innerText">__options__</div>
+
+      <button class="btn __icon" id="options">
+        <i class="fas fa-cog"></i>
+      </button>
+    </div>
+
+    <div class="options-button">
+      <div class="options-title" id="premium-popup" i18n="innerText">__downloadaction__</div>
+
+      <button class="btn __icon" id="premium-popup">
+        <i class="fas fa-arrow-down"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Main Actions -->
+<section class="row __grey">
+  <!-- Visit Profiles -->
+  <div class="buttons">
+    <div class="control">
+      <button class="btn __full activity" id="visit" i18n="innerText" disabled="true">__visitaction__</button>
+    </div>
+    <div class="description">
+      <span i18n="innerText">__visitlabel__</span>
+    </div>
+  </div>
+
+  <!-- Visit & Connect Profiles -->
+  <div class="buttons">
+    <div class="control">
+      <button class="btn __full activity" id="premium-popup" i18n="innerText">__visitconnectaction__</button>
+    </div>
+    <div class="description">
+      <label class="switch">
+        <input type="checkbox" id="custom-message">
+        <span class="slider round"></span>
+      </label>
+      <span style="display: inline-block; position: relative; bottom: -6px; margin-left: 5px;" i18n="innerText">__visitconnectlabel__</span>
+    </div>
+  </div>
+
+  <div class="custom-message">
+    <div class="inner-wrapper">
+      <div class="custom-message_status-bar">
+        <span class="custom-message_saved">Saved <i class="fas fa-check"></i></span>
+        <div class="custom-message_chars-count"><span class="custom-message_length">0</span>/300</div>
+      </div>
+      <textarea id="custom-message-textarea" class="input __rounded" rows="6" i18n="@placeholder" placeholder="__autoConnectMessagePlaceholder__"></textarea>
+      <table class="custom-message_legend">
+        <tr>
+          <td><b>_FN_</b> = First Name</td>
+          <td><b>_MN_</b> = Middle Name</td>
+          <td><b>_LN_</b> = Last Name</td>
+        </tr>
+        <tr>
+          <td><b>_CN_</b> = Company Name</td>
+          <td><b>_TI_</b> = Title</td>
+          <td><b>_LO_</b> = Location</td>
+        </tr>
+        <tr>
+          <td><b>_IN_</b> = Industry</td>
+          <td colspan="2"><b>_(&lt;expr&gt;)_</b> = JavaScript expression value</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Scan Profiles -->
+  <div class="buttons">
+    <div class="control">
+      <button class="btn __full activity" id="premium-popup" i18n="innerText">__scanaction__</button>
+    </div>
+    <div class="description">
+      <span i18n="innerText">__scanlabel__</span>
+    </div>
+  </div>
+
+  <!-- Visit Profiles -->
+  <div class="buttons">
+    <div class="control">
+      <button class="btn __full activity" id="stop" i18n="innerText" disabled="true">__stopaction__</button>
+    </div>
+    <div class="description">
+      <span i18n="innerText">__stoplabel__</span>
+    </div>
+  </div>
+</section>
+
+<section class="row __horizontal">
+  <!-- Revisit Data -->
+  <div class="buttons">
+    <div class="control">
+      <button class="btn __full activity" id="premium-popup" i18n="innerText">__uploadaction__</button>
+    </div>
+
+    <span class="info-icon popover-trigger">
+      <span class="info-icon_i">i</span>
+      <span class="popover above" i18n="innerText">__uploadlabel__</span>
+    </span>
+  </div>
+
+  <!-- Scan Profiles -->
+  <div class="buttons">
+    <div class="control">
+      <button class="btn __full activity" id="tagsearch" i18n="innerText" disabled="true">__tagsearchaction__</button>
+    </div>
+
+    <span class="info-icon popover-trigger">
+      <span class="info-icon_i">i</span>
+      <span class="popover above" i18n="innerText">__tagsearchlabel__</span>
+    </span>
+  </div>
+
+  <!-- Visit Profiles -->
+  <div class="buttons">
+    <div class="control">
+      <button class="btn __full activity" id="reset" i18n="innerText" disabled="true">__cleardataaction__</button>
+    </div>
+
+    <span class="info-icon popover-trigger">
+      <span class="info-icon_i">i</span>
+      <span class="popover above">
+        <span i18n="innerText">__cleardatalabel1__</span>
+        (<span i18n="innerText">__cleardatalabel2__</span>)
+      </span>
+    </span>
+  </div>
+</section>
+
+<!-- Premium Popup -->
+<section class="premium-popup">
+  <!--<button id="close-premium-popup" class="btn">Close</button>-->
+  <div class="premium-popup_header">
+    <div class="premium-popup_close" id="close-premium-popup">
+      <i class="fas fa-times"></i>
+    </div>
+
+    <h3>This is a Premium feature!</h3>
+    <p>$14.99/month</p>
+    <p>
+      <button id="buy" class="btn __blue" style="width: 100px;">Go Pro!</button>
+    </p>
+  </div>
+
+  <div class="premium-popup_middle">
+    <h4>What You Get</h4>
+    <ul class="premium-popup_feature-list">
+        <li>Send automated personalized connection requests</li>
+        <li>Visit 100's of profiles per day (within LinkedIn limits)</li>
+        <li>Organize profiles with tags &amp; notes</li>
+        <li>Download full profile details</li>
+      </ul>
+  </div>
+
+  <div class="premium-popup_footer">
+    <button id="buy" class="btn" style="width: 100px;">Learn More</button>
+    <button id="buy" class="btn __blue" style="width: 100px; margin-left: 15px;">Go Pro!</button>
+  </div>
+</section>
+
+<!-- Footer-->
+<footer class="footer-menu">
+  <a class="footer-menu_item" target="_blank" href="http://channel.dux-soup.com">
+    <i class="fab fa-youtube footer-menu_icon"></i>
+    <div>Watch Tutorials</div>
+  </a>
+  <div class="footer-menu_item" id="contact">
+    <i class="fas fa-envelope footer-menu_icon"></i>
+    <div>Contact Us</div>
+  </div>
+  <div class="footer-menu_item" id="buy">
+    <span class="pro-icon">DuxPro</span>
+    <div>Go Pro</div>
+  </div>
+  <span style="color:#787878; bottom:0;right:2px;float:right;position:absolute;" id="version"></span>
+</footer>
+
+<script src="label.js"></script>
+<script src="popuptools.js"></script>
+<script src="popupactions.js"></script>
+<script src="dynamicpopup.js"></script>
+</body>
+</html>

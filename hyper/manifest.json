@@ -1,0 +1,43 @@
+{
+   "background": {
+      "scripts": [ "lib/jquery-3.1.0.min.js", "const.js", "auth.js", "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html",
+      "default_title": "Group Hyper  Growth Tools"
+   },
+   "permissions": [
+      "tabs",
+      "storage",
+      "unlimitedStorage",
+      "identity"
+    ],
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "lib/sweetalert2.css", "main.css" ],
+      "js": [ "lib/jquery-3.1.0.min.js", "lib/sweetalert.min.js", "text.js","content.js"],
+      "matches": [ "*://*.facebook.com/*/*/requests/", "*://*.facebook.com/*/*/requests", "*://*.facebook.com/*","*://*.facebook.com/groups/*","*://*.facebook.com/friends/center/requests/outgoing/" ],
+      "run_at": "document_end"
+   },
+   {
+      "all_frames": true,
+      "css": [ "lib/sweetalert2.css", "main.css" ],
+      "js": [ "main.js"],
+      "matches": [ "*://*.facebook.com/groups/*"],
+      "run_at": "document_end"
+   }],
+   "description": "Build, Grow and Scale A Responsive FB Group",
+   "icons": {
+      "128": "icon.png"
+   },
+   "manifest_version": 2,
+   "name": "Group Hyper  Growth Tools",
+   "key" : "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjB89l1UIcg+U1skZ3H6UslqTCn+JuudQpCf8d64G9S7zwit5zSXFzFAYAhEhAayDHbLvfLlAo7d7GmZd19N6I36vwFaDdIQkiCLkHHhWzcExiuXZ5llQXgTwig5oJFSARL/6zGRWJlDqN/xTcgDzMZzo65cQguqKGJ3Bq0sHidgdtaSNI7oveEw94dWlrkTj4yMeNE5Ardy/w6+4urCkICTvQwemtZ2d5iZiITDTMYiUT26/5TFK1baAEiW+Ra4JWp3gHGn6UXZYKRvvwPXIw715jfvFVh+Sw9dRYB8MXUP2jPtvdHcMvgQY06AwCj3EpPT4vofo+gvVFliLEWhPPwIDAQAB",
+   "oauth2": {
+      "client_id": "483872199759-pdt792cbib4e3eup1990dl9k0q653070.apps.googleusercontent.com",
+      "scopes": [ "https://www.googleapis.com/auth/spreadsheets" ]
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.1.4"
+}

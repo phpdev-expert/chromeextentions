@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+  <title i18n="innerText"> __options__ | __appTitle__ </title>
+
+  <link href="options-redesigned.css" rel="stylesheet">
+  <link href="cover.css" rel="stylesheet">
+
+  <link href="libs/toastr/toastr.min.css" rel="stylesheet">
+  <link href="libs/responsive-css-tabs/css/newstyle.css" rel="stylesheet">
+  <link href="libs/scheduler/scheduler.css" rel="stylesheet">
+</head>
+<body>
+<main>
+  <header class="header">
+    <div class="logo">
+      <img src="icon-122.png">
+    </div>
+  </header>
+
+  <!-- Tabs -->
+  <input id="tab1" type="radio" name="tabs" checked>
+  <label class="tab-label" for="tab1" i18n="innerText">__optionsSectionTitleActions__</label>
+  <input id="tab2" type="radio" name="tabs">
+  <label class="tab-label" for="tab2" i18n="innerText">__optionsSectionnTitleSkipping__</label>
+  <input id="tab3" type="radio" name="tabs">
+  <label class="tab-label" for="tab3" i18n="innerText">__optionsSectionnTitleThrottling__</label>
+  <input id="tab4" type="radio" name="tabs">
+  <label class="tab-label" for="tab4" i18n="innerText">__optionsSectionTitleIntegration__</label>
+  <input id="tab5" type="radio" name="tabs">
+  <label class="tab-label" for="tab5" i18n="innerText">__optionsSectionTitlePlanner__</label>
+  <input id="tab6" type="radio" name="tabs">
+  <label class="tab-label" for="tab6" i18n="innerText">__optionsSectionnTitleUser__</label>
+  <input id="tab7" type="radio" name="tabs">
+  <label class="tab-label" for="tab7" i18n="innerText">__optionsSectionnTitleBrowser__</label>
+
+  <!-- Automatic Actions -->
+  <section id="content1">
+    <div class="block" id="automations">
+      <div class="option-title" i18n="innerText">__autoActionsHeader__</div>
+      <div class="option-description" i18n="innerText">__autoVisitHint__</div>
+
+      <!-- auto connect -->
+      <div class="toggle-option">
+        <div class="toggle-option_toggle">
+          <label class="switch">
+            <input type="checkbox" id="autoconnect" value="autoconnect" jq-toggle="toggle">
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="toggle-option_description">
+          <span i18n="innerText">__autoConnectLabel__</span>
+
+          <div id="autoconnectfields" style="display: none; margin-bottom: 12px;">
+            <span class="lead" style="font-size:12px;font-style: italic; color:#ff4444" i18n="innerText"> __autoConnectWarning__</span>
+            <br/>
+            <label for="autoconnectmessageflag">
+              <input type="checkbox" id="autoconnectmessageflag" value="autoconnectmessageflag">
+              <span i18n="innerText">__autoConnectMessageFlagLabel__</span>
+            </label>
+            <span id="connectmessagechars" style="padding:2px 3px;font-size:12px;font-style: italic;float:right;z-index: 5;position:relative"></span>
+            <textarea class="input"
+                      i18n="@placeholder"
+                      id="autoconnectmessagetext"
+                      rows="4"
+                      data-maxlength="300"
+                      placeholder="__autoConnectMessagePlaceholder__"></textarea>
+
+            <table class="custom-message_legend">
+              <span i18n="innerText">__markersHintHeader__:</span>
+              <tr>
+                <td><b>_FN_</b> = First Name</td>
+                <td><b>_MN_</b> = Middle Name</td>
+                <td><b>_LN_</b> = Last Name</td>
+              </tr>
+              <tr>
+                <td><b>_CN_</b> = Company Name</td>
+                <td><b>_TI_</b> = Title</td>
+                <td><b>_LO_</b> = Location</td>
+              </tr>
+              <tr>
+                <td><b>_IN_</b> = Industry</td>
+                <td colspan="2"><b>_(&lt;expr&gt;)_</b> = JavaScript expression value</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- auto direct message -->
+      <div class="toggle-option">
+        <div class="toggle-option_toggle">
+          <label class="switch">
+            <input type="checkbox" id="connectedmessageflag" value="connectedmessageflag" jq-toggle="toggle">
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="toggle-option_description">
+          <span i18n="innerText">__connectedMessageFlagLabel__</span>
+
+          <div id="connectedmessagefields" style="display:none; margin-bottom: 12px;">
+            <span id="directmessagechars" style="padding:2px 3px;font-size:12px;font-style: italic;float:right;z-index: 5;position:relative"></span>
+            <textarea class="input"
+                      i18n="@placeholder"
+                      id="connectedmessagetext"
+                      value="connectedmessagetext"
+                      rows="6"
+                      data-maxlength="2000"
+                      placeholder="__connectedMessagePlaceholder__"></textarea>
+
+            <table class="custom-message_legend">
+                <span i18n="innerText">__markersHintHeader__:</span>
+                <tr>
+                <td><b>_FN_</b> = First Name</td>
+                <td><b>_MN_</b> = Middle Name</td>
+                <td><b>_LN_</b> = Last Name</td>
+              </tr>
+              <tr>
+                <td><b>_CN_</b> = Company Name</td>
+                <td><b>_TI_</b> = Title</td>
+                <td><b>_LO_</b> = Location</td>
+              </tr>
+              <tr>
+                <td><b>_IN_</b> = Industry</td>
+                <td colspan="2"><b>_(&lt;expr&gt;)_</b> = JavaScript expression value</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- auto inmail -->
+      <div class="toggle-option">
+        <div class="toggle-option_toggle">
+          <label class="switch">
+            <input type="checkbox" id="sendinmailflag" value="autosendinmailflag" jq-toggle="toggle">
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="toggle-option_description">
+          <span i18n="innerText">__sendInmailLabel__</span>
+
+          <div id="sendinmailfields" style="display:none; margin-bottom: 12px; padding-top: 5px;">
+            <b>Subject</b>
+            <span id="sendinmailsubjectchars" style="padding:2px 3px;font-size:12px;font-style: italic;float:right;z-index: 5;position:relative"></span>
+            <input class="input __full"
+                   style="margin-bottom: 5px;"
+                   i18n="@placeholder"
+                   id="sendinmailsubject"
+                   data-maxlength="200"
+                   placeholder="__sendInmailSubjectPlaceholder__">
+
+            <b>Message</b>
+            <span id="sendinmailbodychars" style="padding:2px 3px;font-size:12px;font-style: italic;float:right;z-index: 5;position:relative"></span>
+            <textarea class="input"
+                      i18n="@placeholder"
+                      id="sendinmailbody"
+                      rows="6"
+                      data-maxlength="2000"
+                      placeholder="__sendInmailBodyPlaceholder__"></textarea>
+
+            <table class="custom-message_legend">
+              <tr>
+                <td><b>_FN_</b> = First Name</td>
+                <td><b>_MN_</b> = Middle Name</td>
+                <td><b>_LN_</b> = Last Name</td>
+              </tr>
+              <tr>
+                <td><b>_CN_</b> = Company Name</td>
+                <td><b>_TI_</b> = Title</td>
+                <td><b>_LO_</b> = Location</td>
+              </tr>
+              <tr>
+                <td><b>_IN_</b> = Industry</td>
+                <td colspan="2"><b>_(&lt;expr&gt;)_</b> = JavaScript expression value</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- auto follow -->
+      <div class="toggle-option">
+        <div class="toggle-option_toggle">
+          <label class="switch">
+            <input type="checkbox" id="autofollow" value="autofollow" jq-toggle="toggle">
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="toggle-option_description">
+          <span i18n="innerText">__autoFollowLabel__</span>
+        </div>
+      </div>
+
+      <!-- auto disconnect -->
+      <div class="toggle-option">
+        <div class="toggle-option_toggle">
+          <label class="switch">
+            <input type="checkbox" id="autodisconnect" value="autodisconnect" jq-toggle="toggle">
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="toggle-option_description">
+          <span i18n="innerText">__autoDisconnectLabel__</span>
+        </div>
+      </div>
+
+      <!-- auto save as lead -->
+      <div class="toggle-option">
+        <div class="toggle-option_toggle">
+          <label class="switch">
+            <input type="checkbox" id="autosaveaslead" value="autosaveaslead" jq-toggle="toggle">
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="toggle-option_description">
+          <span i18n="innerText">__autoSaveAsLeadLabel__</span>
+        </div>
+      </div>
+
+      <!-- auto save as PDF -->
+      <div class="toggle-option">
+        <div class="toggle-option_toggle">
+          <label class="switch">
+            <input type="checkbox" id="autopdf" value="autopdf" jq-toggle="toggle">
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="toggle-option_description">
+          <span i18n="innerText">__autoSaveAsPDFLabel__</span><br>
+          <span style="font-size:smaller;font-style:italic;" i18n="innerText">(__autoSaveAsPDFHint__)</span>
+        </div>
+      </div>
+
+      <!-- auto endorse -->
+      <div class="toggle-option">
+        <div class="toggle-option_toggle">
+          <label class="switch">
+            <input type="checkbox" id="autoendorse" value="autoendorse" jq-toggle="toggle">
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="toggle-option_description">
+          <span class="" i18n="innerText">__autoEndorseHeader1__</span>
+          <select class="input" id="autoendorsetarget">
+            <option value="5" i18n="innerText">__top__ 5</option>
+            <option value="3" i18n="innerText">__top__ 3</option>
+            <option value="1" i18n="innerText">__top__ 1</option>
+            <option value="-1" i18n="innerText">__bottom__ 1</option>
+            <option value="-3" i18n="innerText">__bottom__ 3</option>
+            <option value="-5" i18n="innerText">__bottom__ 5</option>
+          </select>
+          <span i18n="innerText">__autoEndorseHeader2__ </span>
+        </div>
+      </div>
+
+      <!-- auto tag -->
+      <div class="toggle-option">
+        <div class="toggle-option_toggle">
+          <label class="switch">
+            <input type="checkbox" id="autotagflag" value="autotagflag" jq-toggle="toggle">
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="toggle-option_description">
+          <span i18n="innerText">__autoTagHeader1__</span>
+          <input i18n="@placeholder" class="input __small" type="text" id="autotagvalue" placeholder="__autoTagPlaceholder__"/>
+          <span i18n="innerText">__autoTagHeader2__</span> <br>
+          <span style="font-size:smaller;font-style:italic;" i18n="innerText">(__autoTagHint__)</span>
+        </div>
+      </div>
+
+      <!-- auto on manual -->
+      <div class="toggle-option">
+        <div class="toggle-option_toggle">
+          <label class="switch">
+            <input type="checkbox" id="runautomationsonmanualvisits" value="runautomationsonmanualvisits" jq-toggle="toggle">
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="toggle-option_description">
+          <span i18n="innerText">__autoOnManualLabel__</span>
+        </div>
+      </div>
+
+      <!-- Do not run on blacklisted profiles -->
+      <div class="toggle-option">
+        <div class="toggle-option_toggle">
+          <label class="switch">
+            <input type="checkbox" id="excludeblacklistedaction" value="excludeblacklistedaction" jq-toggle="toggle">
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="toggle-option_description">
+          <span i18n="innerText">__excludeBlacklistedActionLabel__</span>
+        </div>
+      </div>
+  
+    </div>
+
+    <div class="block" id="orchestration">
+    <div class="option-title mt-25" i18n="innerText">__followUpHeader__</div>
+    <div class="option-description" i18n="innerText">__followUpActions__</div>
+
+    <!-- follow up -->
+    <div class="toggle-option">
+      <div class="toggle-option_toggle">
+        <label class="switch">
+          <input type="checkbox" id="followupflag" value="followupflag" jq-toggle="toggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="toggle-option_description">
+        <span i18n="innerText">__followUpLabel__</span>
+    </div>
+
+          <br/>
+            <ol id="followupconfigs"></ul>
+            <!--
+            <table class="custom-message_legend">
+            <span i18n="innerText">__markersHintHeader__:</span>
+            <tr>
+              <td><b>_FN_</b> = First Name</td>
+              <td><b>_MN_</b> = Middle Name</td>
+              <td><b>_LN_</b> = Last Name</td>
+            </tr>
+            <tr>
+              <td><b>_CN_</b> = Company Name</td>
+              <td><b>_TI_</b> = Title</td>
+              <td><b>_LO_</b> = Location</td>
+            </tr>
+            <tr>
+              <td><b>_IN_</b> = Industry</td>
+              <td colspan="2"><b>_(&lt;expr&gt;)_</b> = JavaScript expression value</td>
+            </tr>
+          </table>-->
+      </div> 
+    </div>
+  
+
+    <div class="block" id="scrubber">
+
+      <div class="option-title mt-25" i18n="innerText">__nameScrubberHeader__</div>
+      <div class="option-description" i18n="innerText">__nameScrubberHint__</div>
+
+      <textarea class="input" i18n="@placeholder" placeholder="__nameScrubberWordsPlaceholder__" rows="4" cols="65" id="killwords"></textarea>
+      <span style="font-size:12px;font-style: italic;" i18n="innerText">__nameScrubberWordsLabel__</span>
+    </div>
+</section>
+
+  <!-- Profile Filters -->
+  <section id="content2">
+    <div class="option-title" i18n="innerText">__profileSkipperHeader__</div>
+    <div class="option-description" i18n="innerText">__profileSkipperHint__</div>
+
+    <div class="toggle-option">
+      <div class="toggle-option_toggle">
+        <label class="switch">
+          <input type="checkbox" id="skip3plus" value="skip3plus" jq-toggle="toggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="toggle-option_description">
+        <span i18n="innerText">__skip3PlusLabel__</span>
+      </div>
+    </div>
+    <div class="toggle-option">
+      <div class="toggle-option_toggle">
+        <label class="switch">
+          <input type="checkbox" id="skipnopremium" value="skipnopremium" jq-toggle="toggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="toggle-option_description">
+        <span i18n="innerText">__skipNoPremiumLabel__</span>
+        <img class="toggle-option_description_icon" src="icon-premium.png">
+      </div>
+    </div>
+    <div class="toggle-option">
+      <div class="toggle-option_toggle">
+        <label class="switch">
+          <input type="checkbox" id="skipnolion" value="skipnolion" jq-toggle="toggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="toggle-option_description">
+        <span i18n="innerText">__skipNoOpenLinkMemberLabel__</span>
+        <img class="toggle-option_description_icon" src="icon-openlink.png">
+      </div>
+    </div>
+    <div class="toggle-option">
+      <div class="toggle-option_toggle">
+        <label class="switch">
+          <input type="checkbox" id="skipnoinfluencer" value="skipnoinfluencer" jq-toggle="toggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="toggle-option_description">
+        <span i18n="innerText">__skipNotInfluencerLabel__</span>
+        <img class="toggle-option_description_icon" src="icon-influencer.png">
+      </div>
+    </div>
+    <div class="toggle-option">
+      <div class="toggle-option_toggle">
+        <label class="switch">
+          <input type="checkbox" id="skipnojobseeker" value="skipnojobseeker" jq-toggle="toggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="toggle-option_description">
+        <span i18n="innerText">__skipNotJobseekerLabel__</span>
+        <img class="toggle-option_description_icon" src="icon-jobseeker.png">
+      </div>
+    </div>
+    <div class="toggle-option">
+      <div class="toggle-option_toggle">
+        <label class="switch">
+          <input type="checkbox" id="skipincrm" value="skipincrm" jq-toggle="toggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="toggle-option_description">
+        <span i18n="innerText">__skipInCRMLabel__</span>
+        <img class="toggle-option_description_icon" src="icon-incrm.png">
+      </div>
+    </div>
+    <div class="toggle-option">
+      <div class="toggle-option_toggle">
+        <label class="switch">
+          <input type="checkbox" id="skipnoimage" value="skipnoimage" jq-toggle="toggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="toggle-option_description">
+        <span i18n="innerText">__skipNoPhotoLabel__</span>
+      </div>
+    </div>
+    <div class="toggle-option">
+      <div class="toggle-option_toggle">
+        <label class="switch">
+          <input type="checkbox" id="skiptaggedflag" value="skiptaggedflag" jq-toggle="toggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="toggle-option_description">
+        <span i18n="innerText">__skipTaggedAsLabel__</span>
+        <input i18n="@placeholder" class="input __small" type="text" id="skiptaggedvalue" size="40" placeholder="__skipTaggedAsPlaceholder__"/>
+        <br>
+        <span style="font-size:smaller;font-style:italic;" i18n="innerText">(__skipTaggedAsHint__)</span>
+      </div>
+    </div>
+    <div class="toggle-option">
+      <div class="toggle-option_toggle">
+        <label class="switch">
+          <input type="checkbox" id="skipcustomflag" value="skipcustomflag" jq-toggle="toggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="toggle-option_description">
+        <span i18n="innerText">__skipCustomPatternLabel__</span>
+        <input i18n="@placeholder" class="input __small" type="text" id="skipcustomvalue" size="40" placeholder="__skipCustomPatternPlaceholder__"/>
+        <br>
+        <span style="font-size:smaller;font-style:italic;" i18n="innerText">(__skipCustomPatternHint__)</span>
+      </div>
+    </div>
+
+    <div class="option-title mt-25" i18n="innerText">__historySkipperHeader__</div>
+    <div class="option-description">
+      <span i18n="innerText">__historySkipperHint__</span>
+    </div>
+    <select class="input" id="skipdays">
+      <option value="0" i18n="innerText">__historySkipperOption0__</option>
+      <option value="1" i18n="innerText">__historySkipperOption1__</option>
+      <option value="2" i18n="innerText">__historySkipperOption2__</option>
+      <option value="3" i18n="innerText">__historySkipperOption3__</option>
+      <option value="7" i18n="innerText">__historySkipperOption7__</option>
+      <option value="14" i18n="innerText">__historySkipperOption14__</option>
+      <option value="31" i18n="innerText">__historySkipperOption31__</option>
+      <option value="122" i18n="innerText">__historySkipperOption122__</option>
+      <option value="999999" i18n="innerText">__historySkipperOption999999__</option>
+    </select>
+  </section>
+
+
+  <!-- Activity Throttling -->
+  <section id="content3">
+    <div class="block" id="throttling">
+      <div class="option-title" i18n="innerText">__robotSpeedHeader__</div>
+      <div class="option-description" style="margin-top: 10px;">
+        <div>
+          <span i18n="innerText">__robotVisitSpeedLabel__</span>
+          <select class="input" id="throttletime">
+            <!-- around 6 second overhead (network & rendering) just loading the profile and the result page for each view -->
+            <option value="30000" i18n="innerText">__robotVisitSpeedOptionSlowest__</option>
+            <option value="15000" i18n="innerText">__robotVisitSpeedOptionSlower__</option>
+            <option value="10000" i18n="innerText">__robotVisitSpeedOptionSlow__</option>
+            <option value="3000" i18n="innerText">__robotVisitSpeedOptionMedium__</option>
+            <option value="100" i18n="innerText">__robotVisitSpeedOptionFast__</option>
+            <option value="1" i18n="innerText">__robotVisitSpeedOptionRandom__</option>
+          </select>
+        </div>
+
+        <div class="mt-1">
+          <span i18n="innerText">__robotScanSpeedLabel__</span>
+          <select class="input" id="scanthrottletime">
+            <option value="10000" i18n="innerText">__robotScanSpeedOptionSlow__</option>
+            <option value="3000" i18n="innerText">__robotScanSpeedOptionMedium__</option>
+            <option value="100" i18n="innerText">__robotScanSpeedOptionFast__</option>
+          </select>
+        </div>
+
+        <div class="mt-1">
+          <span i18n="innerText">__pauseLabel__</span>
+          <input class="input __small" type="number" min="0" max="60" step="1" style="width: 3em;" id="waitminutes" value="0">
+          <span i18n="innerText">__pauseMinutesLabel__</span>
+          <span style="font-size:smaller;font-style:italic" i18n="innerText">(__pauseRange1Label__)</span>
+          <span i18n="innerText">__pauseWhenLabel__</span>
+          <input class="input __small" type="number" min="0" max="100" step="1" style="width: 3em;" id="waitvisits" value="10">
+          <span i18n="innerText">__pauseVisitsLabel__</span>
+          <span style="font-size:smaller;font-style:italic" i18n="innerText">(__pauseRange2Label__)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="block" id="dailylimits">
+      <div class="option-title mt-25" i18n="innerText">__dailyLimitsHeader__</div>
+      <div class="option-description">
+        <div i18n="innerText" style="color:#ff4444; font-size:12px;">__dailyLimitsWarning__</div>
+        <div class="lead" style="font-size:12px; color:#000000">
+          <span i18n="innerText">__dailyLimitsCheck__</span>
+          <input type="checkbox" id="warning" value="warning">
+        </div>
+      </div>
+
+      <div class="mt-1">
+        <span i18n="innerText">__dailyLimitsVisitLabel__:</span>
+        <select class="input" id="maxvisits" disabled="true" style="color:#999999">
+          <option value="0" i18n="innerText">__dailyLimitsVisitOption0__</option>
+          <option value="5" i18n="innerText">__dailyLimitsVisitOption5__</option>
+          <option value="50" i18n="innerText">__dailyLimitsVisitOption50__</option>
+          <option value="100" i18n="innerText">__dailyLimitsVisitOption100__</option>
+          <option value="150" i18n="innerText">__dailyLimitsVisitOption150__</option>
+          <option value="200" i18n="innerText">__dailyLimitsVisitOption200__</option>
+          <option value="250" i18n="innerText">__dailyLimitsVisitOption250__</option>
+          <option value="300" i18n="innerText">__dailyLimitsVisitOption300__</option>
+          <option value="400" i18n="innerText">__dailyLimitsVisitOption400__</option>
+          <option value="500" i18n="innerText">__dailyLimitsVisitOption500__</option>
+          <option value="600" i18n="innerText">__dailyLimitsVisitOption600__</option>
+          <option value="800" i18n="innerText">__dailyLimitsVisitOption800__</option>
+          <option value="1000" i18n="innerText">__dailyLimitsVisitOption1000__</option>
+          <option value="1200" i18n="innerText">__dailyLimitsVisitOption1200__</option>
+          <option value="1500" i18n="innerText">__dailyLimitsVisitOption1500__</option>
+        </select>
+      </div>
+
+
+      <div class="mt-1">
+        <span i18n="innerText">__dailyLimitsConnectLabel__:</span>
+        <select class="input" id="maxinvites" disabled="true" style="color:#999999" step="25" max="500" i18n="@cap" cap="__dailyLimitsConnectOptionNN__"></select>
+      </div>
+
+      <div class="mt-1">
+        <span i18n="innerText">__dailyLimitsMessageLabel__:</span>
+        <select class="input" id="maxmessages" disabled="true" style="color:#999999" step="50" max="1000" i18n="@cap" cap="__dailyLimitsMessageOptionNN__"></select>
+      </div>
+
+      <div>
+        <label for="randomrange">
+          <input type="checkbox" id="randomrange" value="randomrange">
+          <span i18n="innerText">__randomRangeLabel__</span>
+        </label>
+      </div>
+
+      <div>
+        <label for="snooze">
+          <input type="checkbox" id="snooze" value="snooze">
+          <span i18n="innerText">__snoozeToggleLabel__</span>
+        </label>
+      </div>
+
+      <span style="font-size:smaller;font-style:italic" i18n="innerText"> __snoozeToggleHint__</span>
+    </div>
+  </section>
+
+
+  <!-- Integration -->
+  <section id="content4">
+    <div class="block" id="webhooks">
+      <div class="option-title">
+        <span i18n="innerText">__webhooksHeader__</span>
+        <span style="font-weight: normal; font-size: smaller;">(<a target="_blank" href="https://support.dux-soup.com/article/114-webhook-by-example">API docs</a>)</span>
+      </div>
+      <div class="option-description">Use Webhooks to receive profile views and other events that occur in Dux-Soup. Events are generated for both automated as well as manual profile visits, and when using the scan functions. A maximum of 5 webhooks can be configured.</div>
+
+      <div class="toggle-option">
+        <div class="toggle-option_toggle">
+          <label class="switch">
+            <input type="checkbox" id="webhookprofileflag" value="webhookprofileflag" jq-toggle="toggle">
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="toggle-option_description">
+          <span i18n="innerText">__webhookProfileHeader__</span>
+        </div>
+        <br>
+        <ul id="webhookconfigs">
+          <!-- <li>
+            <input type="url" style="width: 80%;" pattern="(http|https)://.*" i18n="@placeholder" class="input __small" type="text" id="webhookprofilevalue" placeholder="__webhookPlaceholder__" maxlength="256" size="40">
+            <button class="btn __grey __square" id="add">&nbsp;+&nbsp;</button>&nbsp;
+            <button class="btn __grey __square" id="remove">&nbsp;-&nbsp;</button>
+            <br>
+            Events: <input type="checkbox" id="webhookvisiteventsflag" value="webhookvisiteventsflag">
+            <span ii18n="innerText">Visit</span> &nbsp;
+            <input type="checkbox" id="webhookscaneventsflag" value="webhookscaneventsflag">
+            <span ii18n="innerText">Scan</span> &nbsp;
+            <input type="checkbox" id="webhookactioneventsflag" value="webhookactioneventsflag">
+            <span ii18n="innerText">Action</span> &nbsp;
+            <input type="checkbox" id="webhookmessageeventsflag" value="webhookmessageeventsflag">
+            <span ii18n="innerText">Message</span> &nbsp;
+            <input type="checkbox" id="webhookrceventsflag" value="webhookrceventsflag">
+            <span ii18n="innerText">Remote Control</span>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+<br>
+<div class="block" id="messagebridge">
+    <div class="option-title">
+    <span ii18n="innerText">Message Bridge</span>
+  </div>
+  <div class="option-description">Use the Message Bridge to automatically forward standard LinkedIn messages, including connection acceptance notifications. Once enabled, Dux-Soup will check for new messages every 15 minutes and send them to the Webhook. </div>
+
+  <div class="toggle-option">
+    <div class="toggle-option_toggle">
+      <label class="switch">
+        <input type="checkbox" id="messagebridgeflag" value="messagebridgeflag" jq-toggle="toggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <div class="toggle-option_description" style="margin-top: -5px;">
+      <span ii18n="innerText">Automatically read messages in standard LinkedIn and forward them to the Webhook</span>
+    </div>
+  </div>
+</div>
+
+    <div class="block" id="remotecontrol">
+      <div class="option-title mt-25">
+        <span i18n="innerText">__remotecontrolHeader__</span>
+        <span style="font-weight: normal; font-size: smaller;">(<a  target="_blank" href="https://support.dux-soup.com/article/115-remote-control-by-example">API docs</a>)</span>
+      </div>
+      <div class="option-description">Use Remote Control to trigger automated LinkedIn actions from outside of the web browser, e.g. from a CRM or a lead management system.</div>
+
+      <div class="toggle-option">
+        <div class="toggle-option_toggle">
+          <label class="switch">
+            <input type="checkbox" id="remotecontrolflag" value="remotecontrolflag" jq-toggle="toggle">
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="toggle-option_description">
+          <span i18n="innerText">__remotecontrolLabel__</span>
+        </div>
+      </div>
+
+
+      <div class="color-muted" style="font-size: smaller; margin-top: 10px;">
+        <div>
+          <span i18n="innerText">__remotecontrolURLHint__: </span>
+          <input class="input __small" disabled maxlength="256" size="80" id="rcurl">
+        </div>
+        <div class="mt-1">
+          <span i18n="innerText">__remotecontrolKeyHint__: </span>
+          <input class="input __small" disabled maxlength="128" size="80" id="rckey">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Planner -->
+  <section id="content5">
+      <div class="block" id="planner">
+
+    <table cellspacing="10px;" style="margin-left:auto;margin-right:auto">
+      <tr>
+        <td colspan="3" align="center">
+          <strong i18n="innerText">__theRobotPlannerHint__</strong>
+          <input type="hidden" id="robotscheduleplan" value="robotscheduleplan">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" align="center">
+          <div id="weekly-schedule" style="margin-bottom: 20px; margin-left: -65px;"></div>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <button class="btn __grey __square activity" id="randomizeSchedule" i18n="innerText">__random__</button>
+          <button class="btn __grey __square activity" id="resetSchedule" i18n="innerText">__default__</button>
+          <button class="btn __grey __square activity" id="clearSchedule" i18n="innerText">__clear__</button>
+          <button class="btn __grey __square activity" id="saveSchedule" i18n="innerText">__save__</button>
+        </td>
+      </tr>
+    </table>
+    </div>
+  </section>
+
+  <!-- User & License -->
+  <section id="content6">
+    <div id="identifiers">
+      <div class="option-title" i18n="innerText">__userAuthenticationHeader__</div>
+      <div class="option-description">
+        <div><strong i18n="innerText">__yourEmail__:</strong> <input class="input __small" disabled maxlength="64" size="40" id="useremail"></div>
+        <div><strong i18n="innerText">__yourUserID__:</strong> <input class="input __small" disabled maxlength="64" size="40" id="userid"></div>
+        <div style="margin-bottom: 8px;"><strong i18n="innerText">__yourClientID__:</strong> <input class="input __small" disabled maxlength="64" size="40" id="clientid"></div>
+        <button i18n="innerText" id="logout" class="btn __grey __square activity">__logoutCaption__</button>
+      </div>
+    </div>
+
+    <div id="externallicense">
+      <div class="option-title mt-25" i18n="innerText">__externalLicenseHeader__</div>
+      <div class="option-description">
+        <span i18n="innerText">__externalLicenseKeyLabel__</span>:
+        <input class="input __small" type="text" id="xlicensekey">
+        <br/>
+        <span i18n="innerText">__externalLicenseExpiresLabel__</span>:
+        <span id="xlicenseexpiry"></span>
+        <br/>
+        <span id="xlicensemessage"></span>
+        <br/>
+        <a href="licenseadmin.html" i18n="innerText">__externalLicenseAdmin__</a>
+      </div>
+    </div>
+
+    <div id="reset">
+      <div class="option-title mt-25" i18n="innerText">__resetOptionsHeader__</div>
+      <div class="option-description" i18n="innerText">__resetOptionsLabel__</div>
+      <button i18n="innerText" id="resetConfig" class="btn __grey __square activity">__resetOptionsCaption__</button>
+    </div>
+
+    <div id="reload">
+      <div class="option-title mt-25" i18n="innerText">__reloadConfigHeader__</div>
+      <div class="option-description" i18n="innerText">__reloadConfigLabel__</div>
+      <button i18n="innerText" id="reload" class="btn __grey __square activity">__reloadConfigCaption__</button>
+    </div>
+  </section>
+
+  <!-- Browser & Data -->
+  <section id="content7">
+    <div class="block row __flat" id="dataformat">
+      <div class="option-title" i18n="innerText">__dataFileFormatHeader__</div>
+      <span i18n="innerText">__dataFileSeparatorLabel__</span> :
+      <select class="input" id="csvseparator">
+        <option value=",">,</option>
+        <option value=";">;</option>
+        <option value="&#09;">&lt;TAB&gt;</option>
+      </select>
+      <span style="font-size:smaller;font-style:italic" i18n="innerText"> (__dataFileSeparatorHint__)</span>
+    </div>
+    <div class="row __flat" id="display">
+      <div class="option-title" i18n="innerText">__displayOptionsHeader__</div>
+      <span i18n="innerText">__displayNotificationsLabel__</span>: &nbsp;
+      <input type="checkbox" id="infonotifications" value="infonotifications">
+      <span i18n="innerText">__displayNotificationsInfoValue__</span> &nbsp;
+      <input type="checkbox" id="actionnotifications" value="actionnotifications">
+      <span i18n="innerText">__displayNotificationsActionValue__</span> &nbsp;
+      <input type="checkbox" id="warningnotifications" value="warningnotifications">
+      <span i18n="innerText">__displayNotificationsWarningValue__</span>
+      <br>
+      <span i18n="innerText">__displayBadgeLabel1__</span>
+      <select class="input" id="badgedisplay">
+        <option value="visits" i18n="innerText">__displayBadgeOptionVisits__</option>
+        <option value="captures" i18n="innerText">__displayBadgeOptionCaptures__</option>
+        <option value="nothing" i18n="innerText">__displayBadgeOptionNothing__</option>
+      </select>
+      <span i18n="innerText">__displayBadgeLabel2__</span>
+    </div>
+    <div class="row __flat" id="performance">
+      <div class="option-title" i18n="innerText">__browserPerformanceHeader__</div>
+      <span i18n="innerText">__browserPageloadDelayLabel__</span>
+      <select class="input" id="maxpageloadtime">
+        <option value="10000" i18n="innerText">__browserPageloadDelayOption10s__</option>
+        <option value="20000" i18n="innerText">__browserPageloadDelayOption20s__</option>
+        <option value="30000" i18n="innerText">__browserPageloadDelayOption30s__</option>
+        <option value="40000" i18n="innerText">__browserPageloadDelayOption40s__</option>
+      </select>
+      <br>
+      <input type="checkbox" id="killtracking" value="killtracking">
+      <span i18n="innerText">__browserKillTrackingLabel__</span>
+      <br>
+      <input type="checkbox" id="ignoreunknown" value="ignoreunknown">
+      <span i18n="innerText">__browserIgnoreUnknownLabel__</span>
+      <br>
+      <input type="checkbox" id="startdisabled" value="startdisabled">
+      <span i18n="innerText">__browserRobotToggleLabel__</span>
+      <span i18n="innerText" style="font-size:smaller;font-style:italic" i18n="innerText"> (__browserRobotToggleHint__)</span>
+      <br>
+    </div>
+  </section>
+</main>
+</section>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+<script src="label.js"></script>
+<script src="libs/jquery/jquery-2.1.4.min.js"></script>
+<script src="libs/toastr/toastr.min.js"></script>
+<script src="libs/scheduler/scheduler.js"></script>
+<script src="libs/vex/vex.combined.min.js"></script>
+<script src="popuptools.js"></script>
+<script src="schedulertools.js"></script>
+<script src="options.js"></script>
+</body>
+</html>

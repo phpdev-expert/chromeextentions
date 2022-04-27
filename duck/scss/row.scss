@@ -1,0 +1,170 @@
+@import 'variables';
+
+.row {
+  padding: 20px;
+
+  .buttons {
+    position: relative;
+
+    display: table;
+
+    width: 100%;
+
+    .control {
+      display: table-cell;
+
+      width: 35%;
+      padding: 0 10px;
+
+      vertical-align: middle;
+    }
+
+    .description {
+      display: table-cell;
+
+      width: 65%;
+      padding: 0 10px;
+
+      vertical-align: middle;
+
+      color: $colorTextGrey;
+    }
+
+    .video-tutorial {
+      font-size: 20px;
+
+      position: absolute;
+      top: 6px;
+      right: 0;
+
+      transition: color $defaultAnimDuration ease;
+
+      color: $colorTextGrey;
+
+      &:hover {
+        color: #f00; // YouTube Red Brand Color
+      }
+    }
+
+    .info-icon {
+      font-size: 15px;
+
+      display: inline-block;
+
+      margin-top: 3px;
+      padding: 5px;
+
+      cursor: pointer;
+      transition: color $defaultAnimDuration ease;
+
+      color: $colorTextGrey;
+
+      &_i {
+        font-family: Georgia;
+        font-style: italic;
+      }
+
+      &:hover {
+        color: $colorBlack;
+      }
+    }
+  }
+
+  &.__flat {
+    padding: 0;
+  }
+
+  &.__flat + &.__flat {
+    margin-top: 18px;
+  }
+
+  &.__grey {
+    background: $rowGreyBg;
+  }
+
+  &.__horizontal {
+    display: flex;
+
+    .buttons {
+      display: block;
+      flex-basis: 0;
+      flex-grow: 1;
+
+      text-align: center;
+    }
+  }
+
+  // Clearfix
+  &:after {
+    display: block;
+    clear: both;
+
+    content: '';
+  }
+}
+
+.row:not(.__horizontal) {
+  .buttons + .buttons {
+    margin-top: 15px;
+  }
+}
+
+.custom-message {
+  overflow: hidden;
+
+  max-height: 0;
+  margin: 15px -20px 0 -20px;
+
+  transition: all $defaultAnimDuration ease;
+
+  color: $colorTextGrey;
+  background-color: $colorWhite;
+
+  &_status-bar {
+    overflow: hidden;
+
+    padding-bottom: 3px;
+  }
+
+  &_saved {
+    font-weight: bold;
+
+    float: left;
+
+    margin-left: 3px;
+
+    transition: opacity 4s ease;
+
+    opacity: 0;
+    color: $colorGreen;
+
+    &.__shown {
+      transition-duration: $defaultAnimDuration;
+
+      opacity: 1;
+    }
+  }
+
+  &_chars-count {
+    font-weight: bold;
+    font-style: italic;
+
+    float: right;
+
+    margin-right: 3px;
+  }
+
+  &_legend {
+    td {
+      padding: 3px;
+    }
+  }
+
+  .inner-wrapper {
+    padding: 15px 20px 20px 35px;
+  }
+
+  &.__shown {
+    margin-bottom: 20px;
+  }
+}

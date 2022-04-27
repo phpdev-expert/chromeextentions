@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Q&Asorter</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link href="./css/popup.css" rel="stylesheet">
+
+    <style type="text/css">
+       
+            h4 {
+    margin-top: 12px;
+    margin-bottom: 6px;
+    font-size: 20px
+    padding-top: 10px;
+    font-family: sans-serif!important;
+        }
+
+        .row.text-center.header {
+    background: #d6d6d6;
+    padding-top: 10px;
+    margin-top: -40px;
+}
+
+.bussonbg{
+    background: #1ba0f3;;
+}
+a {
+  color: #0E55A6;
+
+}
+
+.textcolor{
+      color: black;
+     }
+
+    .quoraclass {
+    margin-left: 12px;
+    margin-top: 2px;
+}
+    </style>
+
+      <script src="js/content.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row text-center header" style="background: ">
+	    <img src="icon.png" alt="QAsorter" class="logo" style="height: 55px;width: 250px; background-color: "/>
+    <!--     <img src="images/icon.png" alt="QAsorter" class="logo"> -->       
+    </div>
+ 
+
+    <div id="loader" class="row text-center" style="display:none;">
+        <img src="./images/loader_2.gif" alt="QAsorter" class="loader">
+    </div>
+
+    <div class="row" id="form_container" style="display:none;">
+        <div class="col-md-12">
+            <div id="error" class="alert alert-danger text-center" style="display:none;">
+                <strong>Danger!</strong>
+                <p id="text-msg"> </p>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <h4 style="text-align: center; color: black;">Get Instant Access</h4>
+            <form id="login">
+                <input type="hidden" name="method" value="login">
+                <div class="container">
+                    <input type="email"    id="username"    placeholder="Your Email" name="email" required>
+                    <input type="password" id="password"  placeholder="Your Password" name="psw" required>
+
+                    <button type="info" class="bussonbg" id="dologin">Login</button>
+
+ <footer class="pull-left" style="width: 100%;">
+                    <!-- <p>
+                      <a href="#" id="forgotpasslink" class=""> Custom Link </a>
+                      &nbsp <span style="color:black;">|</span>
+                     <a href="#" id="forgotpasslink" class=""> Custom Link </a>
+                    </p>
+
+                    <p>
+                      <a href="#" id="forgotpasslink" > Custom Link </a>
+                      &nbsp <span style="color:black;">|</span>
+                     <a href="#" id="forgotpasslink" class=""> Custom Link </a>
+                    </p> -->
+</footer>
+
+                </div>
+
+
+ </div>
+            </form>
+
+            <form id="forgotpass" style="display:none;">
+                <input type="hidden" name="method" value="reset_password">
+                <div class="container">
+                    <label for="email"><b>Email</b></label>
+                    <input type="email" placeholder="Enter Email" name="email" required>
+
+                    <button type="submit" class="info">Recovery My Password</button>
+                </div>
+
+                <div class="container">
+                    <span class="password"><a href="#loginBackBtn" id="loginBackBtn">Back to Login?</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</br>
+
+    <div class="row text-center" id="dashboard" style="display:none;">
+        <div class="col-md-12 change textcolor">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p class="pages_class">Pages</p>
+                </div>
+                <div class="col-xs-6">
+                    <p class="sort">Sort by:</p>
+                </div>
+            </div>
+        <div class="row change ">
+            
+            <div class="col-xs-3 quoraclass" > Quora </div>
+            <div class="col-xs-2" >
+              <input type="number"  value="10" id="numberec" style="width: 45px;color: black" >
+            </div>
+            <div class="col-xs-3">
+              <input class="btn" type="button" id="sortquora" value="Answers">
+             </div>
+            <div class="col-xs-2 ">
+                <input class="btn" type="button" id="sortquoraf" value="Follow"  >
+            </div>
+
+
+
+        </div>
+
+       <!--  <div class="row">
+                <div class="col-xs-6">
+                    <p class="pages_class">Pages</p>
+                </div>
+                <div class="col-xs-6">
+                    <p class="sort">Sort by:</p>
+                </div>
+            </div>
+        <div class="row change ">
+            
+            <div class="col-xs-3 quoraclass" > Future Site </div>
+            <div class="col-xs-2" >
+              <input type="number"  value="10" id="numberec" style="width: 45px;color: black" >
+            </div>
+            <div class="col-xs-3">
+              <input class="btn" type="button" id="sortquora" value="Answers">
+             </div>
+            <div class="col-xs-2 ">
+                <input class="btn" type="button" id="sortquoraf" value="Follow"  >
+            </div>
+
+
+
+        </div> -->
+
+        <!-- <span> Click on the buttons above to sort and enter number of records you want sort </span> -->
+
+			<button   id="btn_logout" class=" bussonbg" style="width: 254px;"></i> Logout
+            </button>
+             <footer class="pull-left" style="width: 100%;">
+
+             </footer>
+
+        </div>
+    </div>
+</div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="popup.js"></script>
+
+</body>
+</html>

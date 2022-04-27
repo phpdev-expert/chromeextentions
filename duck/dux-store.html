@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title i18n="innerText"> __storeTitle__ | __appTitle__ </title>
+  <link href="libs/vex/vex.css" rel="stylesheet">
+  <link href="libs/vex/vex-theme-default.css" rel="stylesheet">
+  <link href="libs/toastr/toastr.min.css" rel="stylesheet">
+  <link href="options-redesigned.css" rel="stylesheet">
+  <link href="store.css" rel="stylesheet">
+</head>
+
+<body>
+<header class="header">
+  <div class="logo">
+    <img src="icon-122.png">
+  </div>
+</header>
+
+<div class="container">
+  <table>
+    <tr>
+      <td colspan="3" align="center">
+        <h2 i18n="innerText">__storeTitle__</h2>
+        <p><strong i18n="innerText">__storeInfo__</strong></p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" align="center">
+        <hr>
+
+        <h3>Services</h3>
+        <p><strong><span id="currentmailbalance">&nbsp;</span></strong></p>
+
+    </tr>
+    <tr>
+      <td align="left">
+        <h3 style="text-decoration: underline;" i18n="innerText">__addressFinderHeader__</h3>
+      </td>
+      <td><i i18n="innerText">__serviceRate__<i></td>
+      <td><i i18n="innerText">__serviceEnabled__<i></td>
+    </tr>
+    <tr style="vertical-align:top">
+      <td align="left">
+        <p i18n="innerText">__addressFinderInfo__</p>
+      </td>
+      <td i18n="innerText">__addressFinderCost__
+      </td>
+      <td style="text-align:center">
+        <input type="checkbox" id="buymail" value="buymail">
+      </td>
+    </tr>
+
+    <tr style="opacity:0.5">
+      <td colspan="3" align="left">
+        <h3 style="text-decoration: underline;" i18n="innerText">__batchInMailerHeader__</h3>
+    </tr>
+    <tr style="vertical-align:top;opacity:0.5">
+      <td align="left">
+        <p i18n="innerText">__batchInMailerInfo__</p>
+      </td>
+      <td i18n="innerText">__batchInMailerCost__
+      </td>
+      <td style="text-align:center">
+        <i i18n="innerText">__serviceComing__</i>
+      </td>
+    </tr>
+  </table>
+  <hr>
+
+  <table cellspacing="10px;" style="margin-left:auto;margin-right:auto">
+    <tr>
+      <td colspan="2" align="center">
+        <h3 i18n="innerText">__getPoints__</h3>
+    </tr>
+    <tr id="trade" class="shopitem">
+      <td><span class="dstitle lead">__title__</span><img src="gold-star-32.png" style="margin-bottom: -13px;"><br/><span class="dsdesc">__desc__</span></td>
+      <td class="text-right"><input tabindex="-1" type="submit" value="__title__" class="btn btn-lg btn-default activity dsbuy"></td>
+    </tr>
+    <tr id="100_points" class="shopitem">
+      <td><span class="dstitle lead">__title__</span><br/><span class="dsdesc" i18n="innerText">__taster__</span></td>
+      <td class="text-right"><input tabindex="-1" type="submit" value="__title__" class="btn btn-lg btn-default activity dsbuy"></td>
+    </tr>
+    <tr id="250_points" class="shopitem">
+      <td><span class="dstitle lead">__title__</span><br/><span class="dsdesc" i18n="innerText">__save20__</span></td>
+      <td class="text-right"><input tabindex="-1" type="submit" value="__title__" class="btn btn-lg btn-default activity dsbuy"></td>
+    </tr>
+    <tr id="600_points" class="shopitem">
+      <td><span class="dstitle lead">__title__</span><br/><span class="dsdesc" i18n="innerText">__save50__</span></td>
+      <td class="text-right"><input tabindex="-1" type="submit" value="__title__" class="btn btn-lg btn-default activity dsbuy"></td>
+    </tr>
+
+    <tr id="loadsofpoints" class="shopitem" style="display:none">
+      <td><span class="dstitle lead">__title__</span><br/><span class="dsdesc">__desc__</span></td>
+      <td class="text-right"><input tabindex="-1" type="submit" value="__title__" class="btn btn-lg btn-default activity dsbuy"></td>
+    </tr>
+    <tr id="1_point" class="shopitem" style="display:none">
+      <td><span class="dstitle lead">__title__</span><br/><span class="dsdesc">__desc__</span></td>
+      <td class="text-right"><input tabindex="-1" type="submit" value="__title__" class="btn btn-lg btn-default activity dsbuy"></td>
+    </tr>
+  </table>
+  <br/>
+  <hr/>
+  <table style="margin-left:auto;margin-right:auto">
+    <tr>
+      <td colspan="3" align="center" style="background: #f7f7f7; border-radius: 3px;">
+        <p class="lead" style="font-size:12px;font-weight: bold;font-style: italic; color:#202020" i18n="innerText">__tandcs__</p>
+        <ul class="lead" style="font-size:10px;font-style: italic; color:#202020; text-align:left">
+          <li i18n="innerText">__t1__</li>
+          <li i18n="innerText">__t2__</li>
+          <li i18n="innerText">__t3__</li>
+          <li i18n="innerText">__t4__</li>
+          <li i18n="innerText">__t5__</li>
+          <li i18n="innerText">__t6__</li>
+          <li i18n="innerText">__t7__</li>
+        </ul>
+        <p class="lead" style="font-size:12px;font-style: italic; color:#000000" i18n="innerHTML">__confirmTCs__ <input type="checkbox" id="accepttandcs" value="accepttandcs"></p>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<script src="label.js"></script>
+<script src="libs/jquery/jquery-2.1.4.min.js"></script>
+<script src="libs/toastr/toastr.min.js"></script>
+<script src="libs/vex/vex.combined.min.js"></script>
+<script src="popuptools.js"></script>
+<script src="buylib.js"></script>
+<script src="buypointsaction.js"></script>
+<script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+function rewrite(){try{var link=document.querySelector("#global-nav-link-leads");if(link!=null&&link.href!=null){link.href=document.querySelector("#global-nav-link-leads").href.replace(/count=[0-9]*/,"count=10")}}catch(e){console.log(e)}}window.addEventListener("load",function(){rewrite()});

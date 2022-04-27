@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project name="/home/dh/Documents/duck/duck.clpprj">
+ <settings>
+  <PM_URL><![CDATA[http://localhost/duck]]></PM_URL>
+  <PM_HOME_URL><![CDATA[http://localhost/duck]]></PM_HOME_URL>
+  <PM_LIBS><![CDATA[]]></PM_LIBS>
+  <PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION>
+  <PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR>
+  <PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE>
+ </settings>
+ <removed value=";"/>
+ <added value=""/>
+ <lastopfiles>
+  <file name="/home/dh/Documents/duck/action_popup_free.html"/>
+  <file name="/home/dh/Documents/duck/action_popup_pro.html"/>
+  <file name="/home/dh/Documents/duck/manifest.json"/>
+  <file name="/home/dh/Documents/duck/server.js"/>
+  <lastactivefile name=""/>
+ </lastopfiles>
+ <errors version="1.3">
+  <errfile name="/home/dh/Documents/duck/popup-redesigned.css">
+   <error val="2;417;77;417;2502;1;"/>
+  </errfile>
+  <errfile name="/home/dh/Documents/duck/action_popup_pro.html">
+   <error val="80;25;97;25;2002;1;"/>
+   <error val="46;33;63;33;2002;1;"/>
+   <error val="52;47;69;47;2002;1;"/>
+   <error val="11;50;28;50;2002;1;"/>
+   <error val="76;57;93;57;2002;1;"/>
+   <error val="94;64;111;64;2002;1;"/>
+   <error val="77;74;97;74;2002;1;"/>
+   <error val="51;97;68;97;2002;1;"/>
+   <error val="11;100;28;100;2002;1;"/>
+   <error val="51;107;68;107;2002;1;"/>
+   <error val="11;110;28;110;2002;1;"/>
+   <error val="53;119;70;119;2002;1;"/>
+   <error val="33;124;50;124;2002;1;"/>
+   <error val="56;131;73;131;2002;1;"/>
+   <error val="33;136;50;136;2002;1;"/>
+   <error val="52;143;69;143;2002;1;"/>
+   <error val="13;149;30;149;2002;1;"/>
+   <error val="14;150;31;150;2002;1;"/>
+   <error val="8;4;25;4;2002;1;"/>
+  </errfile>
+  <errfile name="/home/dh/Documents/duck/action_popup_free.html">
+   <error val="80;25;97;25;2002;1;"/>
+   <error val="51;33;68;33;2002;1;"/>
+   <error val="52;47;69;47;2002;1;"/>
+   <error val="11;50;28;50;2002;1;"/>
+   <error val="60;57;77;57;2002;1;"/>
+   <error val="94;64;111;64;2002;1;"/>
+   <error val="77;74;97;74;2002;1;"/>
+   <error val="60;97;77;97;2002;1;"/>
+   <error val="11;100;28;100;2002;1;"/>
+   <error val="51;107;68;107;2002;1;"/>
+   <error val="11;110;28;110;2002;1;"/>
+   <error val="60;119;77;119;2002;1;"/>
+   <error val="33;124;50;124;2002;1;"/>
+   <error val="56;131;73;131;2002;1;"/>
+   <error val="33;136;50;136;2002;1;"/>
+   <error val="52;143;69;143;2002;1;"/>
+   <error val="13;149;30;149;2002;1;"/>
+   <error val="14;150;31;150;2002;1;"/>
+   <error val="8;4;25;4;2002;1;"/>
+  </errfile>
+ </errors>
+ <todoblock>
+  <todofile name="/home/dh/Documents/duck/libs/jquery-sendkeys/bililiteRange.js">
+   <todo pos="3;117" name="TODO: revisit this when I have IE11 running on my development machine"/>
+   <todo pos="3;420" name="TODO: determine if this is still necessary, since we only call _nativeSelection if _el is active"/>
+  </todofile>
+  <todofile name="/home/dh/Documents/duck/libs/jquery-ui/jquery-ui.min.js">
+   <todo pos="3;330" name="TODO: determine which cases actually cause this to happen"/>
+   <todo pos="3;442" name="TODO: remove support for widgetEventPrefix"/>
+   <todo pos="3;450" name="TODO remove widgetBaseClass, see #8155"/>
+   <todo pos="4;578" name="TODO remove dual storage"/>
+   <todo pos="4;612" name="TODO remove dual storage"/>
+   <todo pos="2;903" name="TODO: make sure destroying one instance of mouse doesn't mess with"/>
+   <todo pos="5;2219" name="TODO : What's going on here?"/>
+   <todo pos="5;2260" name="TODO: What's that good for? There's not anything to be executed left"/>
+   <todo pos="3;2267" name="TODO: make renderAxis a prototype function"/>
+   <todo pos="3;2316" name="TODO: Unwrap at same DOM position"/>
+   <todo pos="55;2434" name="TODO - jump height"/>
+   <todo pos="19;2580" name="TODO: This seems broken"/>
+   <todo pos="24;2590" name="TODO: Don't modify option"/>
+   <todo pos="56;2721" name="TODO - jump height"/>
+   <todo pos="3;3315" name="TODO: Still need to figure out a way to make relative sorting possible"/>
+   <todo pos="39;3841" name="TODO: Logic to fuzzy, see line 316/317)"/>
+   <todo pos="3;5337" name="TODO: remove in 2.0 (#7115)"/>
+   <todo pos="3;5393" name="TODO: remove this check in 2.0, effectMethod will always be true"/>
+   <todo pos="5;6454" name="TODO remove the fallback, see #8156"/>
+   <todo pos="5;6472" name="TODO remove the fallback, see #8156"/>
+   <todo pos="7;7004" name="TODO pass through original event correctly (just as 2nd argument doesn't work)"/>
+   <todo pos="3;7011" name="TODO: pull out $.Widget's handling for the disabled option into"/>
+   <todo pos="2;7337" name="TODO rename to &quot;widget&quot; when switching to widget factory"/>
+   <todo pos="18;9137" name="TODO: move to stylesheet"/>
+   <todo pos="3;11469" name="TODO: It should never be possible to not have an active item at this"/>
+   <todo pos="3;12879" name="TODO: do we really want to consider this a stop?"/>
+   <todo pos="4;13107" name="TODO: what should we do with values that can't be parsed?"/>
+   <todo pos="2;13996" name="TODO: Remove this function in 1.10 when ajaxOptions is removed"/>
+   <todo pos="2;14033" name="TODO: Remove _ajaxSettings() method when removing this extension"/>
+  </todofile>
+  <todofile name="/home/dh/Documents/duck/libs/jszip/jszip.min.js">
+   <todo pos="2;388" name="TODO: lazy-loading this object isn't the best solution but it's the"/>
+   <todo pos="34;653" name="TODO"/>
+   <todo pos="1;1057" name="TODO find a better way to handle this version,"/>
+   <todo pos="41;1515" name="TODO reverse the parameters ? need to be clean AND consistent with the filter search fn..."/>
+   <todo pos="1;2121" name="TODO expose this as a public variable"/>
+   <todo pos="5;3202" name="TODO : we now have workers that split the work. Do we still need that ?"/>
+   <todo pos="3;8543" name="TODO: may be {}"/>
+   <todo pos="11;9075" name="TODO: 2 or 1 bytes?"/>
+  </todofile>
+  <todofile name="/home/dh/Documents/duck/revisittools.js">
+   <todo pos="5;17" name="TODO : strip &quot; and ' in case the values are wrapped in quotes"/>
+  </todofile>
+ </todoblock>
+ <dbgurls/>
+ <filescache>
+  <file name="/home/dh/Documents/duck/scss/switch.scss" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/scss/row.scss" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/scss/premium.scss" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/scss/popover.scss" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/scss/main.scss" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/scss/main-options.scss" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/scss/input.scss" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/scss/header.scss" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/scss/footer.scss" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/scss/button.scss" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/scss/block.scss" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/scss/_variables.scss" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/scss/_normalize.scss" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/xregexp/xregexp-all.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/vex/vex.css" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/vex/vex.combined.min.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/vex/vex-theme-default.css" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/toastr/toastr.min.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/toastr/toastr.min.css" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/tag-it/tagit.ui-zendesk.css" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/tag-it/tag-it.min.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/tag-it/jquery.tagit.css" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/socket-io/socket.io.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/sha256/sha256.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/scheduler/scheduler.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/scheduler/scheduler.css" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/responsive-css-tabs/css/style.css" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/responsive-css-tabs/css/newstyle.css" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/responsive-css-tabs/license.txt" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/md5/md5.min.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/lz-string/lz-string.min.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/jszip/jszip.min.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/jsgrid/jsgrid.min.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/jsgrid/jsgrid.min.css" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/jsgrid/jsgrid.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/jsgrid/jsgrid.css" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/jsgrid/jsgrid-theme.min.css" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/jsgrid/jsgrid-theme.css" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/jquery-ui/jquery-ui.min.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/jquery-sendkeys/jquery.sendkeys.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/jquery-sendkeys/bililiteRange.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/jquery-csv/jquery.csv.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/jquery/jquery-2.1.4.min.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/bootstrap-toggle/js/bootstrap2-toggle.min.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/bootstrap-toggle/js/bootstrap2-toggle.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/bootstrap-toggle/css/bootstrap2-toggle.min.css" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/bootstrap-toggle/css/bootstrap2-toggle.css" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/bootstrap/js/bootstrap.min.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/backgroundtimer/injected-backgroundtimer.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/libs/backgroundtimer/contentscript-backgroundtimer.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/_metadata/verified_contents.json" crc="1565246736000"/>
+  <file name="/home/dh/Documents/duck/_locales/ru/messages.json" crc="1565246736000"/>
+  <file name="/home/dh/Documents/duck/_locales/pt_BR/messages.json" crc="1565246736000"/>
+  <file name="/home/dh/Documents/duck/_locales/pl/messages.json" crc="1565246736000"/>
+  <file name="/home/dh/Documents/duck/_locales/nl/messages.json" crc="1565246736000"/>
+  <file name="/home/dh/Documents/duck/_locales/it/messages.json" crc="1565246736000"/>
+  <file name="/home/dh/Documents/duck/_locales/fr/messages.json" crc="1565246736000"/>
+  <file name="/home/dh/Documents/duck/_locales/es/messages.json" crc="1565246736000"/>
+  <file name="/home/dh/Documents/duck/_locales/en/messages.json" crc="1565246736000"/>
+  <file name="/home/dh/Documents/duck/_locales/de/messages.json" crc="1565246736000"/>
+  <file name="/home/dh/Documents/duck/tagsearchtools.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/tagsearch.html" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/tagresult.css" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/store.css" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/staticpopup.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/staticextensionhelper.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/staticextensionbootstrap.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/server.js" crc="1565697186542"/>
+  <file name="/home/dh/Documents/duck/schedulertools.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/rewrite_li.js" crc="1565246736000"/>
+  <file name="/home/dh/Documents/duck/revisittools.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/revisit.html" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/postupdate.html" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/postinstall.html" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/popuptools.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/popupactions.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/popup.css" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/popup-redesigned.css" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/pointcontributor.js" crc="1565246736000"/>
+  <file name="/home/dh/Documents/duck/planner.html" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/pass_license.js" crc="1565246736000"/>
+  <file name="/home/dh/Documents/duck/pagetest.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/package.json" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/options.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/options.html" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/options-support.html" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/options-redesigned.css" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/manifest.json" crc="1565246736000"/>
+  <file name="/home/dh/Documents/duck/licenseadmintools.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/licenseadmin.html" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/label.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/init_popup_pro.html" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/init_popup_login.html" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/init_popup_free.html" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/init_popup_broken.html" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/dynamicpopup.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/dux-store.html" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/dslauncher.js" crc="1565246736000"/>
+  <file name="/home/dh/Documents/duck/customsearch_pro.html" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/customsearch_free.html" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/csvupload.css" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/cover.css" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/client.js" crc="1565246736000"/>
+  <file name="/home/dh/Documents/duck/buypointsaction.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/buylib.js" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/bootstrap.min.css" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/action_popup_pro.html" crc="1565246734000"/>
+  <file name="/home/dh/Documents/duck/action_popup_free.html" crc="1565246734000"/>
+ </filescache>
+</project>

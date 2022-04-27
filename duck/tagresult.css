@@ -1,0 +1,162 @@
+@import url("https://app.dux-soup.com/plugin/resources/fonts/opensans/css.css");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+#duxsouptagsearch{
+    border:0px;
+    background: rgb(255, 255, 255);
+}
+.dsresult:hover, .dsresult.hover {
+    background-color: rgb(244, 244, 244);
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+.dsresult {
+    position: relative;
+    overflow: visible;
+    padding: 10px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.dsresult::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.dsresult > a {
+    float: left;
+    margin-right: 10px;
+}
+a {
+    color: #006fa6;
+    text-decoration: none;
+}
+ol, ul {
+    list-style: none;
+}
+#dsmain #results-col {
+    margin-left: 10px;
+    float: left;
+    width: 564px;
+    background: rgb(255, 255, 255);
+
+}
+#dsmain #facets-col {
+    float: left;
+    width: 195px;
+    position: relative;
+    margin-top: 35px;
+    background: rgb(255, 255, 255);
+
+}
+
+#dsmain #ads-col {
+    margin-left: 10px;
+    float: left;
+    width: 195px;
+    background: rgb(255, 255, 255);
+}
+.dsresult .bd .demographic dd {
+    display: inline;
+}
+.dsresult .bd .demographic {
+    font-size: 12px;
+    line-height: 14px;
+    color: rgb(169, 169, 169);
+    overflow: hidden;
+}
+#dsmain {
+    box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 1px, rgba(0, 0, 0, 0.027451) -1px 0px 0px, rgba(0, 0, 0, 0.027451) 1px 0px 0px, rgba(0, 0, 0, 0.117647) 0px 1px 0px;
+    position: relative;
+    background: rgb(255, 255, 255);
+}
+#main {
+    box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 1px, rgba(0, 0, 0, 0.027451) -1px 0px 0px, rgba(0, 0, 0, 0.027451) 1px 0px 0px, rgba(0, 0, 0, 0.117647) 0px 1px 0px;
+    position: relative;
+    background: rgb(255, 255, 255);
+}
+.dssnippet .label {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 16px;
+    float: left;
+    margin-right: 5px;
+    color: rgb(168, 168, 168);
+}
+.dssnippet {
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: normal;
+    color: rgb(168, 168, 168);
+    margin-left: 0px;
+    margin-top: 4px;
+    overflow: hidden;
+}
+.dsresult .bd .description {
+    line-height: 17px;
+    color: rgb(51, 51, 51);
+    font-weight: normal;
+    font-size: 12px;
+}
+.dsresult .bd h3 {
+    font-size: 16px;
+    line-height: 18px;
+    color: rgb(0, 0, 0);
+    font-weight: normal;
+}
+#dsmain {
+    box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 1px, rgba(0, 0, 0, 0.027451) -1px 0px 0px, rgba(0, 0, 0, 0.027451) 1px 0px 0px, rgba(0, 0, 0, 0.117647) 0px 1px 0px;
+    position: relative;
+    background: rgb(255, 255, 255);
+}
+
+a.visited, a:visited {
+    color: #006fa6;
+}
+
+dd, dt, p {
+    display: inline;
+}
+
+.tagsearchform td{
+    width: 400px;
+}
+
+.tagsearchresults td{
+    width:800px;
+}
+h3{
+    -webkit-margin-before: 0.2em;
+    -webkit-margin-after: 0.3em;
+}
+dl{
+    -webkit-margin-before: 0.2em;
+    -webkit-margin-after: 0.3em;
+}
+*{
+    font-family: "Open Sans",sans-serif;
+}
+body{
+    line-height: 1;
+}
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 0.2em;
+    -webkit-margin-after: 0.2em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+}
+dd {
+    display: block;
+    -webkit-margin-start: 2px;
+}
+ul.tagit.focus {
+  border: 1px solid;
+}
+.visible{
+    opacity: 1;
+}
+.invisible{
+    opacity: 0;
+}

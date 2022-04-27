@@ -1,0 +1,24 @@
+{ 
+	"name": "PayPal Tracking Upload",
+	"version": "2.9",
+	"description": "Upload tracking numbers automatically into Paypal without the need to manually upload one by one.",
+	"manifest_version": 2,
+	"incognito": "split",
+	"icons": {
+		"128": "images/icon.png"
+	},
+	"browser_action":{
+		"default_icon":"images/icon.png",
+		"default_popup":"popup.html"
+	},
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	},
+	"permissions": [
+		"storage",
+		"*://*.paypal.com/*",
+		"notifications"
+	]
+}

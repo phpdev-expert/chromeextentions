@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Secure Share",
+  "description": "Secure Share",
+  "version": "1.0.0",
+  "homepage_url": "https://google.com",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+   "default_title": "Click to show an alert"
+ },
+  "permissions": ["activeTab", "scripting"],
+  "background": {
+    	"service_worker": "background.js"
+  	},
+    "content_scripts": [{
+        "matches": [ "http://*/*", "https://*/*"],
+        "js": ["lib/jquery-3.1.0.min.js", "content.js"],
+        "css": ["main.css" ]
+    }],
+  "web_accessible_resources": [
+    {
+      "resources": [ "index.html", "/static/*","content.js" ],
+      "matches": [ "<all_urls>" ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "simple-secure-ext",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.16.7",
+    "@chakra-ui/icons": "^1.1.1",
+    "@chakra-ui/react": "^1.7.4",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "axios": "^0.25.0",
+    "crypto-js": "^4.1.1",
+    "date-fns": "^2.28.0",
+    "date-fns-tz": "^1.2.2",
+    "dayjs": "^1.10.7",
+    "filesize": "^8.0.7",
+    "formik": "^2.2.9",
+    "framer-motion": "4.1.17",
+    "graphql": "^16.2.0",
+    "graphql-request": "^3.7.0",
+    "nanoid": "^3.2.0",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-country-region-selector": "^3.4.0",
+    "react-date-range": "^1.4.0",
+    "react-dom": "^17.0.2",
+    "react-dropzone": "^11.5.1",
+    "react-feather": "2.0.3",
+    "react-icons": "^4.3.1",
+    "react-query": "^3.34.7",
+    "react-router-dom": "6",
+    "react-scripts": "3.1.2",
+    "timeago.js": "^4.0.2",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "cross-env": "7.0.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "cross-env INLINE_RUNTIME_CHUNK=false react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ]
+}

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Group Hyper  Growth Tools</title>
+    <script src="lib/jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap-3.2.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="loader.css">
+    <script src="lib/store.everything.min.js"></script>
+    <script src="lib/jquery.resizableColumns.min.js"></script>
+    <script src="lib/sweetalert.min.js"></script>
+    <script src="const.js"></script>
+    <script src="text.js"></script>
+    <script src="auth.js"></script>
+  </head>
+  <body>
+    <div class="page-header" style="text-align: center;display: flex;">
+      <div class="left-side">
+            <img src="./images/04.png" style="width: 240px; vertical-align: bottom">
+        </div>
+        <div class="right-side">
+              <ul>
+                <li>Hyper Growth Tool helps you to collect group members emails and data from FBGroup to a google spreadsheet automatically.</li>
+                <li>Collects email from group questions.</li>
+                <li>Helps you to grow your email list on autopilot.</li>
+                <li>Need help with this tool ?</li>
+                <li>Email : support@grouphypergrowth.com</li>
+                </ul>
+                 <!--<footer class="center-block" style="    margin: 15px 0px;
+          font-size: 16px;">
+        </footer>-->
+        </div>
+
+
+    </div>
+    <div class="control-label" style="padding-bottom: 5px;text-align: center;
+    margin-bottom: 22px;">
+      <button class="btn btn-primary" id="automate" style="    background: #DAA520;">Automate</button>
+      <button class="btn btn-danger" id="download" >Download to CSV</button>
+      <button class="btn btn-danger" id="toSheet">Push to Google Sheet</button>
+      <button class="btn btn-danger" id="clear">Clear Data</button>
+      <select class="form-control" id="groupList" disabled>
+      </select>
+      <input id="sheetUrl" class="form-control" style="display: none; width: 50%;" placeholder="Your Google Sheet URL, make sure you can to write into it">
+      <button class="btn btn-default" id="openSheet" title="" disabled>Open Google Sheet</button>
+      <button class="btn btn-primary" id="automate-approval-btn" style="    background: #DAA520;">Automate Fbook</button>
+    </div>
+    <div class="dataTable">
+      <table class="table table-bordered" id="dataTable">
+        <thead>
+          <tr>
+            <th>Group Name</th>
+            <th>User ID</th>
+            <th>Facebook Username</th>
+            <th>Joined Facebook On</th>
+            <th>Q1</th>
+            <th>A1</th>
+            <th>Q2</th>
+            <th>A2</th>
+            <th>Q3</th>
+            <th>A3</th>
+            <th>Date Added</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <div class="loading">Loading&#8230;</div>
+
+        <!-- add new data popup -->
+    <div class="test-modal add-new-data-popup" tabindex="-1">
+            <div class="swal-modal-p">
+                <div class="swal-title">
+                 Now, you can push data to google sheet automatically!
+             </div>
+                <div class="swal-content">
+                    <div >
+                    <label style="">Auto upload data to the google sheet:</label>
+                    <input type="checkbox" name="automation-applied" class="automation-applied">
+                    </div> <div style="margin-top: 10px;">
+                    <label style="">Upload data after every :</label>
+                    <input type="number" name="url-text" class="time-interval" style="width: 50px;"> <span class="label-to-label">Mins (15+)</span>
+                    </div>
+                </div>
+                <div class="swal-footer">
+                    <div class="swal-button-container">
+                        <button class="swal-button save-auto-data">SAVE</button>
+                        <button class="swal-button cancel-auto-data" style="margin-left: 20px;">CANCEL</button>
+
+                <div class="swal-button__loader">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Settings for Automatic Approval to Facebook -->
+    <div class="test-modal approval-settings-popup" tabindex="-1">
+      <div class="swal-modal-p">
+          <div class="swal-title autoapprove-fb-header">
+            <h3>Automatically Approve Your Facebook Members From The Facebook Group Itself.</h3>
+            <p>Turning This On Will Automatically Open Up Another Tab (Every X Minutes) To Request Members To Be Approved On Your Behalf.</p>
+       </div>
+          <div class="swal-content">
+              <div >
+              <label style="">Auto Approve all Members' Request:</label>
+              <input type="checkbox" name="approval-automation-applied" class="approval-automation-applied">
+              </div> <div style="margin-top: 10px;">
+              <label style="">Approve Member's request after every :</label>
+              <input type="number" name="url-text" class="approval-time-interval" style="width: 50px;"> <span class="label-to-label">Mins (15+)</span>
+              </div>
+
+          </div>
+          <div class="swal-footer">
+              <div class="swal-button-container">
+                  <button class="swal-button save-automation-approval">SAVE</button>
+                  <button class="swal-button cancel-automation-approval" style="margin-left: 20px;">CANCEL</button>
+                  <button class="swal-button stop-automation-approval" style="margin-left: 20px;">STOP</button>
+
+          <div class="swal-button__loader">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          </div>
+      </div>
+  </div>
+</div>
+    <script src="dataList.js"></script>
+  </body>
+</html>

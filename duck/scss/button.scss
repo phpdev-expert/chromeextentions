@@ -1,0 +1,84 @@
+@import 'variables';
+
+.btn {
+  font-size: 12px;
+  font-weight: bold;
+
+  padding: 10px;
+
+  cursor: pointer;
+  transition: all $defaultAnimDuration ease;
+  transition-property: background, color;
+
+  color: $colorBlack;
+  border: 3px solid white;
+  border-radius: 99px;
+  outline: none;
+  background: #f2f2f2;
+  box-shadow: 0 1px 3px rgba(black, .2);
+
+  &.__icon {
+    font-size: 16px;
+
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+
+    text-align: center;
+    vertical-align: middle;
+
+    color: $colorTextGrey;
+    border: none;
+    border-radius: 50%;
+    background: white;
+  }
+
+  &.__full {
+    width: 100%;
+  }
+
+  &.__white {
+    padding: 10px 13px;
+
+    background: $colorWhite;
+    box-shadow: none;
+  }
+
+  &.__square {
+    border-radius: 3px;
+    padding: 8px 10px !important;
+  }
+
+  &.__white-transparent {
+    padding: 10px 13px;
+
+    color: $colorWhite;
+    border: none;
+    background: rgba($colorWhite, .2);
+    box-shadow: none;
+
+    &:hover {
+      background: rgba($colorWhite, .3) !important;
+    }
+  }
+
+  &[disabled] {
+    pointer-events: none;
+
+    opacity: .5;
+  }
+
+  &:hover,
+  &.__blue {
+    color: $colorWhite;
+    background: $accentColor !important;
+  }
+}
+
+.row:not(.__grey) .btn:not(.__icon), .btn.__grey {
+  padding: 10px 15px;
+
+  border: none;
+  background: $colorButtonGrey;
+  box-shadow: none;
+}
